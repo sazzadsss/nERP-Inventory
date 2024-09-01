@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ReferencePath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\</ReferencePath>
+    <PublishUrlHistory>D:\Published Files\nERP Inventory\|E:\Published Files\nERP Inventory\|C:\KSoft-Inventory-NCL\</PublishUrlHistory>
+    <InstallUrlHistory>http://192.168.0.100/nERP-Inventory/|http://192.168.0.100/Hal-Inventory/|http://192.168.0.100/nERP-Apparel/|\\192.168.0.100\nERP Solutions\nERP Inventory\|\\192.168.0.100\KSoft\KSoft-Inventory\</InstallUrlHistory>
+    <SupportUrlHistory />
+    <UpdateUrlHistory>http://192.168.0.100/nERP-Inventory/|http://192.168.0.100/Hal-Inventory/|http://192.168.0.100/nERP-Apparel/|\\192.168.0.100\KSoft\KSoft-Inventory\</UpdateUrlHistory>
+    <BootstrapperUrlHistory>\\ECHOTEXSERVER\All Share\Mahmud-Soft\Prerequisites</BootstrapperUrlHistory>
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+    <ProjectView>ShowAllFiles</ProjectView>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
+  </PropertyGroup>
+</Project>

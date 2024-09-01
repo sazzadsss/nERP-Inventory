@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CriticalPathFinishFabricViewDataSet" targetNamespace="http://tempuri.org/CriticalPathFinishFabricViewDataSet.xsd" xmlns:mstns="http://tempuri.org/CriticalPathFinishFabricViewDataSet.xsd" xmlns="http://tempuri.org/CriticalPathFinishFabricViewDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_InventoryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_InventoryConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Inventory.My.MySettings.GlobalReference.Default.KSoft_InventoryConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CriticalPath_FinishFabric_ViewTableAdapter" GeneratorDataComponentClassName="CriticalPath_FinishFabric_ViewTableAdapter" Name="CriticalPath_FinishFabric_View" UserDataComponentName="CriticalPath_FinishFabric_ViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_InventoryConnectionString (MySettings)" DbObjectName="[echo-printing].dbo.CriticalPath_FinishFabric_View" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT CriticalPathId, ProgramNo, Buyer, Style, FabricColorName, ColorLD, FabricType, FabricComposition, YarnCount, FGSM, FabricBookingDate, LastAmendmentDate, FabricRequireDate, ExDate, OrderQuantity, Consumption, FinishQuantity, GreyQuantity, IsComplete, LdFirstSubmitDate_Plan, LdLastSubmitDate_Plan, LdApprovalDate_Plan, LdDaysRequire_Plan, LdFirstSubmitDate_Actual, LdLastSubmitDate_Actual, LdApprovalDate_Actual, LdDaysRequire_Actual, LdIsComplete, YFirstReceivedDate_Plan, YReceivedQuantity_Plan, YLastReceivedDate_Plan, YLastReceivedQuantity_Plan, YReceivedBalance_Plan, YFirstReceivedDate_Actual, YReceivedQuantity_Actual, YLastReceivedDate_Actual, YLastReceivedQuantity_Actual, YReceivedBalance_Actual, YIsComplete, KStartDate_Plan, KFirstKnittingQuantity_Plan, KLastDate_Plan, KLastKnittingQuantity_Plan, KKnittingBalance_Plan, KStartDate_Actual, KFirstKnittingQuantity_Actual, KLastDate_Actual, KLastKnittingQuantity_Actual, KKnittingBalance_Actual, KIsComplete, GIStartDate_Plan, GIFirstInsQuantity_Plan, GILastDate_Plan, GILastInsQuantity_Plan, GIInsBalance_Plan, GIStartDate_Actual, GIFirstInsQuantity_Actual, GILastDate_Actual, GILastInsQuantity_Actual, GIInsBalance_Actual, GIIsComplete, GSFirstReceiveDate_Plan, GSFirstReceiveQuantity_Plan, GSLastReceiveDate_Plan, GSLastReceiveQuantity_Plan, GSReceiveBalance_Plan, GSFirstReceiveDate_Actual, GSFirstReceiveQuantity_Actual, GSLastReceiveDate_Actual, GSLastReceiveQuantity_Actual, GSReceiveBalance_Actual, GSIsComplete, FIStartDate_Plan, FIStartQuantity_Plan, FILastDate_Plan, FILastQuantity_Plan, FIInsBalance_Plan, FIStartDate_Actual, FIStartQuantity_Actual, FILastDate_Actual, FILastQuantity_Actual, FIInsBalance_Actual, FIIsComplete, DStartDate_Plan, DStartDyeingQuantity_Plan, DLastDate_Plan, DLastDyeingQuantity_Plan, DDyeingBalance_Plan, DStartDate_Actual, DStartDyeingQuantity_Actual, DLastDate_Actual, DLastDyeingQuantity_Actual, DDyeingBalance_Actual, DIsComplete, BStartDate_Plan, BStartBatchQuantity_Plan, BLastDate_Plan, BLastBatchQuantity_Plan, BBatchBalance_Plan, BStartDate_Actual, BStartBatchQuantity_Actual, BLastDate_Actual, BLastBatchQuantity_Actual, BBatchBalance_Actual, BIsCompleted, FStartDate_Plan, FStartFinishQuantity_Plan, FLastDate_Plan, FLastFinishQuantity_Plan, FinishBalance_Plan, FStartDate_Actual, FStartFinishQuantity_Actual, FLastDate_Actual, FLastFinishQuantity_Actual, FFinishBalance_Actual, FIsComplete, FSFirstReceivedDate_Plan, FSReceiveQuantity_Plan, FSLastReceivedDate_Plan, FSLastReceiveQuantity_Plan, FSReceivedBalance_Plan, FSFirstReceivedDate_Actual, FSReceiveQuantity_Actual, FSLastReceivedDate_Actual, FSLastReceiveQuantity_Actual, FSReceivedBalance_Actual, FSIsComplete FROM dbo.CriticalPath_FinishFabric_View</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CriticalPathId" DataSetColumn="CriticalPathId" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="Buyer" DataSetColumn="Buyer" />
+              <Mapping SourceColumn="Style" DataSetColumn="Style" />
+              <Mapping SourceColumn="FabricColorName" DataSetColumn="FabricColorName" />
+              <Mapping SourceColumn="ColorLD" DataSetColumn="ColorLD" />
+              <Mapping SourceColumn="FabricType" DataSetColumn="FabricType" />
+              <Mapping SourceColumn="FabricComposition" DataSetColumn="FabricComposition" />
+              <Mapping SourceColumn="YarnCount" DataSetColumn="YarnCount" />
+              <Mapping SourceColumn="FGSM" DataSetColumn="FGSM" />
+              <Mapping SourceColumn="FabricBookingDate" DataSetColumn="FabricBookingDate" />
+              <Mapping SourceColumn="LastAmendmentDate" DataSetColumn="LastAmendmentDate" />
+              <Mapping SourceColumn="FabricRequireDate" DataSetColumn="FabricRequireDate" />
+              <Mapping SourceColumn="ExDate" DataSetColumn="ExDate" />
+              <Mapping SourceColumn="OrderQuantity" DataSetColumn="OrderQuantity" />
+              <Mapping SourceColumn="Consumption" DataSetColumn="Consumption" />
+              <Mapping SourceColumn="FinishQuantity" DataSetColumn="FinishQuantity" />
+              <Mapping SourceColumn="GreyQuantity" DataSetColumn="GreyQuantity" />
+              <Mapping SourceColumn="IsComplete" DataSetColumn="IsComplete" />
+              <Mapping SourceColumn="LdFirstSubmitDate_Plan" DataSetColumn="LdFirstSubmitDate_Plan" />
+              <Mapping SourceColumn="LdLastSubmitDate_Plan" DataSetColumn="LdLastSubmitDate_Plan" />
+              <Mapping SourceColumn="LdApprovalDate_Plan" DataSetColumn="LdApprovalDate_Plan" />
+              <Mapping SourceColumn="LdDaysRequire_Plan" DataSetColumn="LdDaysRequire_Plan" />
+              <Mapping SourceColumn="LdFirstSubmitDate_Actual" DataSetColumn="LdFirstSubmitDate_Actual" />
+              <Mapping SourceColumn="LdLastSubmitDate_Actual" DataSetColumn="LdLastSubmitDate_Actual" />
+              <Mapping SourceColumn="LdApprovalDate_Actual" DataSetColumn="LdApprovalDate_Actual" />
+              <Mapping SourceColumn="LdDaysRequire_Actual" DataSetColumn="LdDaysRequire_Actual" />
+              <Mapping SourceColumn="LdIsComplete" DataSetColumn="LdIsComplete" />
+              <Mapping SourceColumn="YFirstReceivedDate_Plan" DataSetColumn="YFirstReceivedDate_Plan" />
+              <Mapping SourceColumn="YReceivedQuantity_Plan" DataSetColumn="YReceivedQuantity_Plan" />
+              <Mapping SourceColumn="YLastReceivedDate_Plan" DataSetColumn="YLastReceivedDate_Plan" />
+              <Mapping SourceColumn="YLastReceivedQuantity_Plan" DataSetColumn="YLastReceivedQuantity_Plan" />
+              <Mapping SourceColumn="YReceivedBalance_Plan" DataSetColumn="YReceivedBalance_Plan" />
+              <Mapping SourceColumn="YFirstReceivedDate_Actual" DataSetColumn="YFirstReceivedDate_Actual" />
+              <Mapping SourceColumn="YReceivedQuantity_Actual" DataSetColumn="YReceivedQuantity_Actual" />
+              <Mapping SourceColumn="YLastReceivedDate_Actual" DataSetColumn="YLastReceivedDate_Actual" />
+              <Mapping SourceColumn="YLastReceivedQuantity_Actual" DataSetColumn="YLastReceivedQuantity_Actual" />
+              <Mapping SourceColumn="YReceivedBalance_Actual" DataSetColumn="YReceivedBalance_Actual" />
+              <Mapping SourceColumn="YIsComplete" DataSetColumn="YIsComplete" />
+              <Mapping SourceColumn="KStartDate_Plan" DataSetColumn="KStartDate_Plan" />
+              <Mapping SourceColumn="KFirstKnittingQuantity_Plan" DataSetColumn="KFirstKnittingQuantity_Plan" />
+              <Mapping SourceColumn="KLastDate_Plan" DataSetColumn="KLastDate_Plan" />
+              <Mapping SourceColumn="KLastKnittingQuantity_Plan" DataSetColumn="KLastKnittingQuantity_Plan" />
+              <Mapping SourceColumn="KKnittingBalance_Plan" DataSetColumn="KKnittingBalance_Plan" />
+              <Mapping SourceColumn="KStartDate_Actual" DataSetColumn="KStartDate_Actual" />
+              <Mapping SourceColumn="KFirstKnittingQuantity_Actual" DataSetColumn="KFirstKnittingQuantity_Actual" />
+              <Mapping SourceColumn="KLastDate_Actual" DataSetColumn="KLastDate_Actual" />
+              <Mapping SourceColumn="KLastKnittingQuantity_Actual" DataSetColumn="KLastKnittingQuantity_Actual" />
+              <Mapping SourceColumn="KKnittingBalance_Actual" DataSetColumn="KKnittingBalance_Actual" />
+              <Mapping SourceColumn="KIsComplete" DataSetColumn="KIsComplete" />
+              <Mapping SourceColumn="GIStartDate_Plan" DataSetColumn="GIStartDate_Plan" />
+              <Mapping SourceColumn="GIFirstInsQuantity_Plan" DataSetColumn="GIFirstInsQuantity_Plan" />
+              <Mapping SourceColumn="GILastDate_Plan" DataSetColumn="GILastDate_Plan" />
+              <Mapping SourceColumn="GILastInsQuantity_Plan" DataSetColumn="GILastInsQuantity_Plan" />
+              <Mapping SourceColumn="GIInsBalance_Plan" DataSetColumn="GIInsBalance_Plan" />
+              <Mapping SourceColumn="GIStartDate_Actual" DataSetColumn="GIStartDate_Actual" />
+              <Mapping SourceColumn="GIFirstInsQuantity_Actual" DataSetColumn="GIFirstInsQuantity_Actual" />
+              <Mapping SourceColumn="GILastDate_Actual" DataSetColumn="GILastDate_Actual" />
+              <Mapping SourceColumn="GILastInsQuantity_Actual" DataSetColumn="GILastInsQuantity_Actual" />
+              <Mapping SourceColumn="GIInsBalance_Actual" DataSetColumn="GIInsBalance_Actual" />
+              <Mapping SourceColumn="GIIsComplete" DataSetColumn="GIIsComplete" />
+              <Mapping SourceColumn="GSFirstReceiveDate_Plan" DataSetColumn="GSFirstReceiveDate_Plan" />
+              <Mapping SourceColumn="GSFirstReceiveQuantity_Plan" DataSetColumn="GSFirstReceiveQuantity_Plan" />
+              <Mapping SourceColumn="GSLastReceiveDate_Plan" DataSetColumn="GSLastReceiveDate_Plan" />
+              <Mapping SourceColumn="GSLastReceiveQuantity_Plan" DataSetColumn="GSLastReceiveQuantity_Plan" />
+              <Mapping SourceColumn="GSReceiveBalance_Plan" DataSetColumn="GSReceiveBalance_Plan" />
+              <Mapping SourceColumn="GSFirstReceiveDate_Actual" DataSetColumn="GSFirstReceiveDate_Actual" />
+              <Mapping SourceColumn="GSFirstReceiveQuantity_Actual" DataSetColumn="GSFirstReceiveQuantity_Actual" />
+              <Mapping SourceColumn="GSLastReceiveDate_Actual" DataSetColumn="GSLastReceiveDate_Actual" />
+              <Mapping SourceColumn="GSLastReceiveQuantity_Actual" DataSetColumn="GSLastReceiveQuantity_Actual" />
+              <Mapping SourceColumn="GSReceiveBalance_Actual" DataSetColumn="GSReceiveBalance_Actual" />
+              <Mapping SourceColumn="GSIsComplete" DataSetColumn="GSIsComplete" />
+              <Mapping SourceColumn="FIStartDate_Plan" DataSetColumn="FIStartDate_Plan" />
+              <Mapping SourceColumn="FIStartQuantity_Plan" DataSetColumn="FIStartQuantity_Plan" />
+              <Mapping SourceColumn="FILastDate_Plan" DataSetColumn="FILastDate_Plan" />
+              <Mapping SourceColumn="FILastQuantity_Plan" DataSetColumn="FILastQuantity_Plan" />
+              <Mapping SourceColumn="FIInsBalance_Plan" DataSetColumn="FIInsBalance_Plan" />
+              <Mapping SourceColumn="FIStartDate_Actual" DataSetColumn="FIStartDate_Actual" />
+              <Mapping SourceColumn="FIStartQuantity_Actual" DataSetColumn="FIStartQuantity_Actual" />
+              <Mapping SourceColumn="FILastDate_Actual" DataSetColumn="FILastDate_Actual" />
+              <Mapping SourceColumn="FILastQuantity_Actual" DataSetColumn="FILastQuantity_Actual" />
+              <Mapping SourceColumn="FIInsBalance_Actual" DataSetColumn="FIInsBalance_Actual" />
+              <Mapping SourceColumn="FIIsComplete" DataSetColumn="FIIsComplete" />
+              <Mapping SourceColumn="DStartDate_Plan" DataSetColumn="DStartDate_Plan" />
+              <Mapping SourceColumn="DStartDyeingQuantity_Plan" DataSetColumn="DStartDyeingQuantity_Plan" />
+              <Mapping SourceColumn="DLastDate_Plan" DataSetColumn="DLastDate_Plan" />
+              <Mapping SourceColumn="DLastDyeingQuantity_Plan" DataSetColumn="DLastDyeingQuantity_Plan" />
+              <Mapping SourceColumn="DDyeingBalance_Plan" DataSetColumn="DDyeingBalance_Plan" />
+              <Mapping SourceColumn="DStartDate_Actual" DataSetColumn="DStartDate_Actual" />
+              <Mapping SourceColumn="DStartDyeingQuantity_Actual" DataSetColumn="DStartDyeingQuantity_Actual" />
+              <Mapping SourceColumn="DLastDate_Actual" DataSetColumn="DLastDate_Actual" />
+              <Mapping SourceColumn="DLastDyeingQuantity_Actual" DataSetColumn="DLastDyeingQuantity_Actual" />
+              <Mapping SourceColumn="DDyeingBalance_Actual" DataSetColumn="DDyeingBalance_Actual" />
+              <Mapping SourceColumn="DIsComplete" DataSetColumn="DIsComplete" />
+              <Mapping SourceColumn="BStartDate_Plan" DataSetColumn="BStartDate_Plan" />
+              <Mapping SourceColumn="BStartBatchQuantity_Plan" DataSetColumn="BStartBatchQuantity_Plan" />
+              <Mapping SourceColumn="BLastDate_Plan" DataSetColumn="BLastDate_Plan" />
+              <Mapping SourceColumn="BLastBatchQuantity_Plan" DataSetColumn="BLastBatchQuantity_Plan" />
+              <Mapping SourceColumn="BBatchBalance_Plan" DataSetColumn="BBatchBalance_Plan" />
+              <Mapping SourceColumn="BStartDate_Actual" DataSetColumn="BStartDate_Actual" />
+              <Mapping SourceColumn="BStartBatchQuantity_Actual" DataSetColumn="BStartBatchQuantity_Actual" />
+              <Mapping SourceColumn="BLastDate_Actual" DataSetColumn="BLastDate_Actual" />
+              <Mapping SourceColumn="BLastBatchQuantity_Actual" DataSetColumn="BLastBatchQuantity_Actual" />
+              <Mapping SourceColumn="BBatchBalance_Actual" DataSetColumn="BBatchBalance_Actual" />
+              <Mapping SourceColumn="BIsCompleted" DataSetColumn="BIsCompleted" />
+              <Mapping SourceColumn="FStartDate_Plan" DataSetColumn="FStartDate_Plan" />
+              <Mapping SourceColumn="FStartFinishQuantity_Plan" DataSetColumn="FStartFinishQuantity_Plan" />
+              <Mapping SourceColumn="FLastDate_Plan" DataSetColumn="FLastDate_Plan" />
+              <Mapping SourceColumn="FLastFinishQuantity_Plan" DataSetColumn="FLastFinishQuantity_Plan" />
+              <Mapping SourceColumn="FinishBalance_Plan" DataSetColumn="FinishBalance_Plan" />
+              <Mapping SourceColumn="FStartDate_Actual" DataSetColumn="FStartDate_Actual" />
+              <Mapping SourceColumn="FStartFinishQuantity_Actual" DataSetColumn="FStartFinishQuantity_Actual" />
+              <Mapping SourceColumn="FLastDate_Actual" DataSetColumn="FLastDate_Actual" />
+              <Mapping SourceColumn="FLastFinishQuantity_Actual" DataSetColumn="FLastFinishQuantity_Actual" />
+              <Mapping SourceColumn="FFinishBalance_Actual" DataSetColumn="FFinishBalance_Actual" />
+              <Mapping SourceColumn="FIsComplete" DataSetColumn="FIsComplete" />
+              <Mapping SourceColumn="FSFirstReceivedDate_Plan" DataSetColumn="FSFirstReceivedDate_Plan" />
+              <Mapping SourceColumn="FSReceiveQuantity_Plan" DataSetColumn="FSReceiveQuantity_Plan" />
+              <Mapping SourceColumn="FSLastReceivedDate_Plan" DataSetColumn="FSLastReceivedDate_Plan" />
+              <Mapping SourceColumn="FSLastReceiveQuantity_Plan" DataSetColumn="FSLastReceiveQuantity_Plan" />
+              <Mapping SourceColumn="FSReceivedBalance_Plan" DataSetColumn="FSReceivedBalance_Plan" />
+              <Mapping SourceColumn="FSFirstReceivedDate_Actual" DataSetColumn="FSFirstReceivedDate_Actual" />
+              <Mapping SourceColumn="FSReceiveQuantity_Actual" DataSetColumn="FSReceiveQuantity_Actual" />
+              <Mapping SourceColumn="FSLastReceivedDate_Actual" DataSetColumn="FSLastReceivedDate_Actual" />
+              <Mapping SourceColumn="FSLastReceiveQuantity_Actual" DataSetColumn="FSLastReceiveQuantity_Actual" />
+              <Mapping SourceColumn="FSReceivedBalance_Actual" DataSetColumn="FSReceivedBalance_Actual" />
+              <Mapping SourceColumn="FSIsComplete" DataSetColumn="FSIsComplete" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CriticalPathFinishFabricViewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="CriticalPathFinishFabricViewDataSet" msprop:Generator_DataSetName="CriticalPathFinishFabricViewDataSet" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CriticalPath_FinishFabric_View" msprop:Generator_UserTableName="CriticalPath_FinishFabric_View" msprop:Generator_RowDeletedName="CriticalPath_FinishFabric_ViewRowDeleted" msprop:Generator_RowChangedName="CriticalPath_FinishFabric_ViewRowChanged" msprop:Generator_RowClassName="CriticalPath_FinishFabric_ViewRow" msprop:Generator_RowChangingName="CriticalPath_FinishFabric_ViewRowChanging" msprop:Generator_RowEvArgName="CriticalPath_FinishFabric_ViewRowChangeEvent" msprop:Generator_RowEvHandlerName="CriticalPath_FinishFabric_ViewRowChangeEventHandler" msprop:Generator_TableClassName="CriticalPath_FinishFabric_ViewDataTable" msprop:Generator_TableVarName="tableCriticalPath_FinishFabric_View" msprop:Generator_RowDeletingName="CriticalPath_FinishFabric_ViewRowDeleting" msprop:Generator_TablePropName="CriticalPath_FinishFabric_View">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CriticalPathId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="CriticalPathId" msprop:Generator_ColumnVarNameInTable="columnCriticalPathId" msprop:Generator_ColumnPropNameInRow="CriticalPathId" msprop:Generator_ColumnPropNameInTable="CriticalPathIdColumn" type="xs:long" />
+              <xs:element name="ProgramNo" msprop:Generator_UserColumnName="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Buyer" msprop:Generator_UserColumnName="Buyer" msprop:Generator_ColumnVarNameInTable="columnBuyer" msprop:Generator_ColumnPropNameInRow="Buyer" msprop:Generator_ColumnPropNameInTable="BuyerColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Style" msprop:Generator_UserColumnName="Style" msprop:Generator_ColumnVarNameInTable="columnStyle" msprop:Generator_ColumnPropNameInRow="Style" msprop:Generator_ColumnPropNameInTable="StyleColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FabricColorName" msprop:Generator_UserColumnName="FabricColorName" msprop:Generator_ColumnVarNameInTable="columnFabricColorName" msprop:Generator_ColumnPropNameInRow="FabricColorName" msprop:Generator_ColumnPropNameInTable="FabricColorNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ColorLD" msprop:Generator_UserColumnName="ColorLD" msprop:Generator_ColumnVarNameInTable="columnColorLD" msprop:Generator_ColumnPropNameInRow="ColorLD" msprop:Generator_ColumnPropNameInTable="ColorLDColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FabricType" msprop:Generator_UserColumnName="FabricType" msprop:Generator_ColumnVarNameInTable="columnFabricType" msprop:Generator_ColumnPropNameInRow="FabricType" msprop:Generator_ColumnPropNameInTable="FabricTypeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FabricComposition" msprop:Generator_UserColumnName="FabricComposition" msprop:Generator_ColumnVarNameInTable="columnFabricComposition" msprop:Generator_ColumnPropNameInRow="FabricComposition" msprop:Generator_ColumnPropNameInTable="FabricCompositionColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YarnCount" msprop:Generator_UserColumnName="YarnCount" msprop:Generator_ColumnVarNameInTable="columnYarnCount" msprop:Generator_ColumnPropNameInRow="YarnCount" msprop:Generator_ColumnPropNameInTable="YarnCountColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FGSM" msprop:Generator_UserColumnName="FGSM" msprop:Generator_ColumnVarNameInTable="columnFGSM" msprop:Generator_ColumnPropNameInRow="FGSM" msprop:Generator_ColumnPropNameInTable="FGSMColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FabricBookingDate" msprop:Generator_UserColumnName="FabricBookingDate" msprop:Generator_ColumnVarNameInTable="columnFabricBookingDate" msprop:Generator_ColumnPropNameInRow="FabricBookingDate" msprop:Generator_ColumnPropNameInTable="FabricBookingDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LastAmendmentDate" msprop:Generator_UserColumnName="LastAmendmentDate" msprop:Generator_ColumnVarNameInTable="columnLastAmendmentDate" msprop:Generator_ColumnPropNameInRow="LastAmendmentDate" msprop:Generator_ColumnPropNameInTable="LastAmendmentDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FabricRequireDate" msprop:Generator_UserColumnName="FabricRequireDate" msprop:Generator_ColumnVarNameInTable="columnFabricRequireDate" msprop:Generator_ColumnPropNameInRow="FabricRequireDate" msprop:Generator_ColumnPropNameInTable="FabricRequireDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ExDate" msprop:Generator_UserColumnName="ExDate" msprop:Generator_ColumnVarNameInTable="columnExDate" msprop:Generator_ColumnPropNameInRow="ExDate" msprop:Generator_ColumnPropNameInTable="ExDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OrderQuantity" msprop:Generator_UserColumnName="OrderQuantity" msprop:Generator_ColumnVarNameInTable="columnOrderQuantity" msprop:Generator_ColumnPropNameInRow="OrderQuantity" msprop:Generator_ColumnPropNameInTable="OrderQuantityColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Consumption" msprop:Generator_UserColumnName="Consumption" msprop:Generator_ColumnVarNameInTable="columnConsumption" msprop:Generator_ColumnPropNameInRow="Consumption" msprop:Generator_ColumnPropNameInTable="ConsumptionColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FinishQuantity" msprop:Generator_UserColumnName="FinishQuantity" msprop:Generator_ColumnVarNameInTable="columnFinishQuantity" msprop:Generator_ColumnPropNameInRow="FinishQuantity" msprop:Generator_ColumnPropNameInTable="FinishQuantityColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GreyQuantity" msprop:Generator_UserColumnName="GreyQuantity" msprop:Generator_ColumnVarNameInTable="columnGreyQuantity" msprop:Generator_ColumnPropNameInRow="GreyQuantity" msprop:Generator_ColumnPropNameInTable="GreyQuantityColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IsComplete" msprop:Generator_UserColumnName="IsComplete" msprop:Generator_ColumnVarNameInTable="columnIsComplete" msprop:Generator_ColumnPropNameInRow="IsComplete" msprop:Generator_ColumnPropNameInTable="IsCompleteColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="LdFirstSubmitDate_Plan" msprop:Generator_UserColumnName="LdFirstSubmitDate_Plan" msprop:Generator_ColumnVarNameInTable="columnLdFirstSubmitDate_Plan" msprop:Generator_ColumnPropNameInRow="LdFirstSubmitDate_Plan" msprop:Generator_ColumnPropNameInTable="LdFirstSubmitDate_PlanColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LdLastSubmitDate_Plan" msprop:Generator_UserColumnName="LdLastSubmitDate_Plan" msprop:Generator_ColumnVarNameInTable="columnLdLastSubmitDate_Plan" msprop:Generator_ColumnPropNameInRow="LdLastSubmitDate_Plan" msprop:Generator_ColumnPropNameInTable="LdLastSubmitDate_PlanColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LdApprovalDate_Plan" msprop:Generator_UserColumnName="LdApprovalDate_Plan" msprop:Generator_ColumnVarNameInTable="columnLdApprovalDate_Plan" msprop:Generator_ColumnPropNameInRow="LdApprovalDate_Plan" msprop:Generator_ColumnPropNameInTable="LdApprovalDate_PlanColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LdDaysRequire_Plan" msprop:Generator_UserColumnName="LdDaysRequire_Plan" msprop:Generator_ColumnVarNameInTable="columnLdDaysRequire_Plan" msprop:Generator_ColumnPropNameInRow="LdDaysRequire_Plan" msprop:Generator_ColumnPropNameInTable="LdDaysRequire_PlanColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LdFirstSubmitDate_Actual" msprop:Generator_UserColumnName="LdFirstSubmitDate_Actual" msprop:Generator_ColumnVarNameInTable="columnLdFirstSubmitDate_Actual" msprop:Generator_ColumnPropNameInRow="LdFirstSubmitDate_Actual" msprop:Generator_ColumnPropNameInTable="LdFirstSubmitDate_ActualColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LdLastSubmitDate_Actual" msprop:Generator_UserColumnName="LdLastSubmitDate_Actual" msprop:Generator_ColumnVarNameInTable="columnLdLastSubmitDate_Actual" msprop:Generator_ColumnPropNameInRow="LdLastSubmitDate_Actual" msprop:Generator_ColumnPropNameInTable="LdLastSubmitDate_ActualColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LdApprovalDate_Actual" msprop:Generator_UserColumnName="LdApprovalDate_Actual" msprop:Generator_ColumnVarNameInTable="columnLdApprovalDate_Actual" msprop:Generator_ColumnPropNameInRow="LdApprovalDate_Actual" msprop:Generator_ColumnPropNameInTable="LdApprovalDate_ActualColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LdDaysRequire_Actual" msprop:Generator_UserColumnName="LdDaysRequire_Actual" msprop:Generator_ColumnVarNameInTable="columnLdDaysRequire_Actual" msprop:Generator_ColumnPropNameInRow="LdDaysRequire_Actual" msprop:Generator_ColumnPropNameInTable="LdDaysRequire_ActualColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LdIsComplete" msprop:Generator_UserColumnName="LdIsComplete" msprop:Generator_ColumnVarNameInTable="columnLdIsComplete" msprop:Generator_ColumnPropNameInRow="LdIsComplete" msprop:Generator_ColumnPropNameInTable="LdIsCompleteColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="YFirstReceivedDate_Plan" msprop:Generator_UserColumnName="YFirstReceivedDate_Plan" msprop:Generator_ColumnVarNameInTable="columnYFirstReceivedDate_Plan" msprop:Generator_ColumnPropNameInRow="YFirstReceivedDate_Plan" msprop:Generator_ColumnPropNameInTable="YFirstReceivedDate_PlanColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="YReceivedQuantity_Plan" msprop:Generator_UserColumnName="YReceivedQuantity_Plan" msprop:Generator_ColumnVarNameInTable="columnYReceivedQuantity_Plan" msprop:Generator_ColumnPropNameInRow="YReceivedQuantity_Plan" msprop:Generator_ColumnPropNameInTable="YReceivedQuantity_PlanColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="YLastReceivedDate_Plan" msprop:Generator_UserColumnName="YLastReceivedDate_Plan" msprop:Generator_ColumnVarNameInTable="columnYLastReceivedDate_Plan" msprop:Generator_ColumnPropNameInRow="YLastReceivedDate_Plan" msprop:Generator_ColumnPropNameInTable="YLastReceivedDate_PlanColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="YLastReceivedQuantity_Plan" msprop:Generator_UserColumnName="YLastReceivedQuantity_Plan" msprop:Generator_ColumnVarNameInTable="columnYLastReceivedQuantity_Plan" msprop:Generator_ColumnPropNameInRow="YLastReceivedQuantity_Plan" msprop:Generator_ColumnPropNameInTable="YLastReceivedQuantity_PlanColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="YReceivedBalance_Plan" msprop:Generator_UserColumnName="YReceivedBalance_Plan" msprop:Generator_ColumnVarNameInTable="columnYReceivedBalance_Plan" msprop:Generator_ColumnPropNameInRow="YReceivedBalance_Plan" msprop:Generator_ColumnPropNameInTable="YReceivedBalance_PlanColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="YFirstReceivedDate_Actual" msprop:Generator_UserColumnName="YFirstReceivedDate_Actual" msprop:Generator_ColumnVarNameInTable="columnYFirstReceivedDate_Actual" msprop:Generator_ColumnPropNameInRow="YFirstReceivedDate_Actual" msprop:Generator_ColumnPropNameInTable="YFirstReceivedDate_ActualColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="YReceivedQuantity_Actual" msprop:Generator_UserColumnName="YReceivedQuantity_Actual" msprop:Generator_ColumnVarNameInTable="columnYReceivedQuantity_Actual" msprop:Generator_ColumnPropNameInRow="YReceivedQuantity_Actual" msprop:Generator_ColumnPropNameInTable="YReceivedQuantity_ActualColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="YLastReceivedDate_Actual" msprop:Generator_UserColumnName="YLastReceivedDate_Actual" msprop:Generator_ColumnVarNameInTable="columnYLastReceivedDate_Actual" msprop:Generator_ColumnPropNameInRow="YLastReceivedDate_Actual" msprop:Generator_ColumnPropNameInTable="YLastReceivedDate_ActualColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="YLastReceivedQuantity_Actual" msprop:Generator_UserColumnName="YLastReceivedQuantity_Actual" msprop:Generator_ColumnVarNameInTable="columnYLastReceivedQuantity_Actual" msprop:Generator_ColumnPropNameInRow="YLastReceivedQuantity_Actual" msprop:Generator_ColumnPropNameInTable="YLastReceivedQuantity_ActualColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="YReceivedBalance_Actual" msprop:Generator_UserColumnName="YReceivedBalance_Actual" msprop:Generator_ColumnVarNameInTable="columnYReceivedBalance_Actual" msprop:Generator_ColumnPropNameInRow="YReceivedBalance_Actual" msprop:Generator_ColumnPropNameInTable="YReceivedBalance_ActualColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="YIsComplete" msprop:Generator_UserColumnName="YIsComplete" msprop:Generator_ColumnVarNameInTable="columnYIsComplete" msprop:Generator_ColumnPropNameInRow="YIsComplete" msprop:Generator_ColumnPropNameInTable="YIsCompleteColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="KStartDate_Plan" msprop:Generator_UserColumnName="KStartDate_Plan" msprop:Generator_ColumnVarNameInTable="columnKStartDate_Plan" msprop:Generator_ColumnPropNameInRow="KStartDate_Plan" msprop:Generator_ColumnPropNameInTable="KStartDate_PlanColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="KFirstKnittingQuantity_Plan" msprop:Generator_UserColumnName="KFirstKnittingQuantity_Plan" msprop:Generator_ColumnVarNameInTable="columnKFirstKnittingQuantity_Plan" msprop:Generator_ColumnPropNameInRow="KFirstKnittingQuantity_Plan" msprop:Generator_ColumnPropNameInTable="KFirstKnittingQuantity_PlanColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="KLastDate_Plan" msprop:Generator_UserColumnName="KLastDate_Plan" msprop:Generator_ColumnVarNameInTable="columnKLastDate_Plan" msprop:Generator_ColumnPropNameInRow="KLastDate_Plan" msprop:Generator_ColumnPropNameInTable="KLastDate_PlanColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="KLastKnittingQuantity_Plan" msprop:Generator_UserColumnName="KLastKnittingQuantity_Plan" msprop:Generator_ColumnVarNameInTable="columnKLastKnittingQuantity_Plan" msprop:Generator_ColumnPropNameInRow="KLastKnittingQuantity_Plan" msprop:Generator_ColumnPropNameInTable="KLastKnittingQuantity_PlanColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="KKnittingBalance_Plan" msprop:Generator_UserColumnName="KKnittingBalance_Plan" msprop:Generator_ColumnVarNameInTable="columnKKnittingBalance_Plan" msprop:Generator_ColumnPropNameInRow="KKnittingBalance_Plan" msprop:Generator_ColumnPropNameInTable="KKnittingBalance_PlanColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KStartDate_Actual" msprop:Generator_UserColumnName="KStartDate_Actual" msprop:Generator_ColumnVarNameInTable="columnKStartDate_Actual" msprop:Generator_ColumnPropNameInRow="KStartDate_Actual" msprop:Generator_ColumnPropNameInTable="KStartDate_ActualColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="KFirstKnittingQuantity_Actual" msprop:Generator_UserColumnName="KFirstKnittingQuantity_Actual" msprop:Generator_ColumnVarNameInTable="columnKFirstKnittingQuantity_Actual" msprop:Generator_ColumnPropNameInRow="KFirstKnittingQuantity_Actual" msprop:Generator_ColumnPropNameInTable="KFirstKnittingQuantity_ActualColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="KLastDate_Actual" msprop:Generator_UserColumnName="KLastDate_Actual" msprop:Generator_ColumnVarNameInTable="columnKLastDate_Actual" msprop:Generator_ColumnPropNameInRow="KLastDate_Actual" msprop:Generator_ColumnPropNameInTable="KLastDate_ActualColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="KLastKnittingQuantity_Actual" msprop:Generator_UserColumnName="KLastKnittingQuantity_Actual" msprop:Generator_ColumnVarNameInTable="columnKLastKnittingQuantity_Actual" msprop:Generator_ColumnPropNameInRow="KLastKnittingQuantity_Actual" msprop:Generator_ColumnPropNameInTable="KLastKnittingQuantity_ActualColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="KKnittingBalance_Actual" msprop:Generator_UserColumnName="KKnittingBalance_Actual" msprop:Generator_ColumnVarNameInTable="columnKKnittingBalance_Actual" msprop:Generator_ColumnPropNameInRow="KKnittingBalance_Actual" msprop:Generator_ColumnPropNameInTable="KKnittingBalance_ActualColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KIsComplete" msprop:Generator_UserColumnName="KIsComplete" msprop:Generator_ColumnVarNameInTable="columnKIsComplete" msprop:Generator_ColumnPropNameInRow="KIsComplete" msprop:Generator_ColumnPropNameInTable="KIsCompleteColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="GIStartDate_Plan" msprop:Generator_UserColumnName="GIStartDate_Plan" msprop:Generator_ColumnVarNameInTable="columnGIStartDate_Plan" msprop:Generator_ColumnPropNameInRow="GIStartDate_Plan" msprop:Generator_ColumnPropNameInTable="GIStartDate_PlanColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="GIFirstInsQuantity_Plan" msprop:Generator_UserColumnName="GIFirstInsQuantity_Plan" msprop:Generator_ColumnVarNameInTable="columnGIFirstInsQuantity_Plan" msprop:Generator_ColumnPropNameInRow="GIFirstInsQuantity_Plan" msprop:Generator_ColumnPropNameInTable="GIFirstInsQuantity_PlanColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GILastDate_Plan" msprop:Generator_UserColumnName="GILastDate_Plan" msprop:Generator_ColumnVarNameInTable="columnGILastDate_Plan" msprop:Generator_ColumnPropNameInRow="GILastDate_Plan" msprop:Generator_ColumnPropNameInTable="GILastDate_PlanColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="GILastInsQuantity_Plan" msprop:Generator_UserColumnName="GILastInsQuantity_Plan" msprop:Generator_ColumnVarNameInTable="columnGILastInsQuantity_Plan" msprop:Generator_ColumnPropNameInRow="GILastInsQuantity_Plan" msprop:Generator_ColumnPropNameInTable="GILastInsQuantity_PlanColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GIInsBalance_Plan" msprop:Generator_UserColumnName="GIInsBalance_Plan" msprop:Generator_ColumnVarNameInTable="columnGIInsBalance_Plan" msprop:Generator_ColumnPropNameInRow="GIInsBalance_Plan" msprop:Generator_ColumnPropNameInTable="GIInsBalance_PlanColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GIStartDate_Actual" msprop:Generator_UserColumnName="GIStartDate_Actual" msprop:Generator_ColumnVarNameInTable="columnGIStartDate_Actual" msprop:Generator_ColumnPropNameInRow="GIStartDate_Actual" msprop:Generator_ColumnPropNameInTable="GIStartDate_ActualColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="GIFirstInsQuantity_Actual" msprop:Generator_UserColumnName="GIFirstInsQuantity_Actual" msprop:Generator_ColumnVarNameInTable="columnGIFirstInsQuantity_Actual" msprop:Generator_ColumnPropNameInRow="GIFirstInsQuantity_Actual" msprop:Generator_ColumnPropNameInTable="GIFirstInsQuantity_ActualColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GILastDate_Actual" msprop:Generator_UserColumnName="GILastDate_Actual" msprop:Generator_ColumnVarNameInTable="columnGILastDate_Actual" msprop:Generator_ColumnPropNameInRow="GILastDate_Actual" msprop:Generator_ColumnPropNameInTable="GILastDate_ActualColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="GILastInsQuantity_Actual" msprop:Generator_UserColumnName="GILastInsQuantity_Actual" msprop:Generator_ColumnVarNameInTable="columnGILastInsQuantity_Actual" msprop:Generator_ColumnPropNameInRow="GILastInsQuantity_Actual" msprop:Generator_ColumnPropNameInTable="GILastInsQuantity_ActualColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GIInsBalance_Actual" msprop:Generator_UserColumnName="GIInsBalance_Actual" msprop:Generator_ColumnVarNameInTable="columnGIInsBalance_Actual" msprop:Generator_ColumnPropNameInRow="GIInsBalance_Actual" msprop:Generator_ColumnPropNameInTable="GIInsBalance_ActualColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GIIsComplete" msprop:Generator_UserColumnName="GIIsComplete" msprop:Generator_ColumnVarNameInTable="columnGIIsComplete" msprop:Generator_ColumnPropNameInRow="GIIsComplete" msprop:Generator_ColumnPropNameInTable="GIIsCompleteColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="GSFirstReceiveDate_Plan" msprop:Generator_UserColumnName="GSFirstReceiveDate_Plan" msprop:Generator_ColumnVarNameInTable="columnGSFirstReceiveDate_Plan" msprop:Generator_ColumnPropNameInRow="GSFirstReceiveDate_Plan" msprop:Generator_ColumnPropNameInTable="GSFirstReceiveDate_PlanColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="GSFirstReceiveQuantity_Plan" msprop:Generator_UserColumnName="GSFirstReceiveQuantity_Plan" msprop:Generator_ColumnVarNameInTable="columnGSFirstReceiveQuantity_Plan" msprop:Generator_ColumnPropNameInRow="GSFirstReceiveQuantity_Plan" msprop:Generator_ColumnPropNameInTable="GSFirstReceiveQuantity_PlanColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GSLastReceiveDate_Plan" msprop:Generator_UserColumnName="GSLastReceiveDate_Plan" msprop:Generator_ColumnVarNameInTable="columnGSLastReceiveDate_Plan" msprop:Generator_ColumnPropNameInRow="GSLastReceiveDate_Plan" msprop:Generator_ColumnPropNameInTable="GSLastReceiveDate_PlanColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="GSLastReceiveQuantity_Plan" msprop:Generator_UserColumnName="GSLastReceiveQuantity_Plan" msprop:Generator_ColumnVarNameInTable="columnGSLastReceiveQuantity_Plan" msprop:Generator_ColumnPropNameInRow="GSLastReceiveQuantity_Plan" msprop:Generator_ColumnPropNameInTable="GSLastReceiveQuantity_PlanColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GSReceiveBalance_Plan" msprop:Generator_UserColumnName="GSReceiveBalance_Plan" msprop:Generator_ColumnVarNameInTable="columnGSReceiveBalance_Plan" msprop:Generator_ColumnPropNameInRow="GSReceiveBalance_Plan" msprop:Generator_ColumnPropNameInTable="GSReceiveBalance_PlanColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GSFirstReceiveDate_Actual" msprop:Generator_UserColumnName="GSFirstReceiveDate_Actual" msprop:Generator_ColumnVarNameInTable="columnGSFirstReceiveDate_Actual" msprop:Generator_ColumnPropNameInRow="GSFirstReceiveDate_Actual" msprop:Generator_ColumnPropNameInTable="GSFirstReceiveDate_ActualColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="GSFirstReceiveQuantity_Actual" msprop:Generator_UserColumnName="GSFirstReceiveQuantity_Actual" msprop:Generator_ColumnVarNameInTable="columnGSFirstReceiveQuantity_Actual" msprop:Generator_ColumnPropNameInRow="GSFirstReceiveQuantity_Actual" msprop:Generator_ColumnPropNameInTable="GSFirstReceiveQuantity_ActualColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GSLastReceiveDate_Actual" msprop:Generator_UserColumnName="GSLastReceiveDate_Actual" msprop:Generator_ColumnVarNameInTable="columnGSLastReceiveDate_Actual" msprop:Generator_ColumnPropNameInRow="GSLastReceiveDate_Actual" msprop:Generator_ColumnPropNameInTable="GSLastReceiveDate_ActualColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="GSLastReceiveQuantity_Actual" msprop:Generator_UserColumnName="GSLastReceiveQuantity_Actual" msprop:Generator_ColumnVarNameInTable="columnGSLastReceiveQuantity_Actual" msprop:Generator_ColumnPropNameInRow="GSLastReceiveQuantity_Actual" msprop:Generator_ColumnPropNameInTable="GSLastReceiveQuantity_ActualColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GSReceiveBalance_Actual" msprop:Generator_UserColumnName="GSReceiveBalance_Actual" msprop:Generator_ColumnVarNameInTable="columnGSReceiveBalance_Actual" msprop:Generator_ColumnPropNameInRow="GSReceiveBalance_Actual" msprop:Generator_ColumnPropNameInTable="GSReceiveBalance_ActualColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GSIsComplete" msprop:Generator_UserColumnName="GSIsComplete" msprop:Generator_ColumnVarNameInTable="columnGSIsComplete" msprop:Generator_ColumnPropNameInRow="GSIsComplete" msprop:Generator_ColumnPropNameInTable="GSIsCompleteColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="FIStartDate_Plan" msprop:Generator_UserColumnName="FIStartDate_Plan" msprop:Generator_ColumnVarNameInTable="columnFIStartDate_Plan" msprop:Generator_ColumnPropNameInRow="FIStartDate_Plan" msprop:Generator_ColumnPropNameInTable="FIStartDate_PlanColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FIStartQuantity_Plan" msprop:Generator_UserColumnName="FIStartQuantity_Plan" msprop:Generator_ColumnVarNameInTable="columnFIStartQuantity_Plan" msprop:Generator_ColumnPropNameInRow="FIStartQuantity_Plan" msprop:Generator_ColumnPropNameInTable="FIStartQuantity_PlanColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FILastDate_Plan" msprop:Generator_UserColumnName="FILastDate_Plan" msprop:Generator_ColumnVarNameInTable="columnFILastDate_Plan" msprop:Generator_ColumnPropNameInRow="FILastDate_Plan" msprop:Generator_ColumnPropNameInTable="FILastDate_PlanColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FILastQuantity_Plan" msprop:Generator_UserColumnName="FILastQuantity_Plan" msprop:Generator_ColumnVarNameInTable="columnFILastQuantity_Plan" msprop:Generator_ColumnPropNameInRow="FILastQuantity_Plan" msprop:Generator_ColumnPropNameInTable="FILastQuantity_PlanColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FIInsBalance_Plan" msprop:Generator_UserColumnName="FIInsBalance_Plan" msprop:Generator_ColumnVarNameInTable="columnFIInsBalance_Plan" msprop:Generator_ColumnPropNameInRow="FIInsBalance_Plan" msprop:Generator_ColumnPropNameInTable="FIInsBalance_PlanColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FIStartDate_Actual" msprop:Generator_UserColumnName="FIStartDate_Actual" msprop:Generator_ColumnVarNameInTable="columnFIStartDate_Actual" msprop:Generator_ColumnPropNameInRow="FIStartDate_Actual" msprop:Generator_ColumnPropNameInTable="FIStartDate_ActualColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FIStartQuantity_Actual" msprop:Generator_UserColumnName="FIStartQuantity_Actual" msprop:Generator_ColumnVarNameInTable="columnFIStartQuantity_Actual" msprop:Generator_ColumnPropNameInRow="FIStartQuantity_Actual" msprop:Generator_ColumnPropNameInTable="FIStartQuantity_ActualColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FILastDate_Actual" msprop:Generator_UserColumnName="FILastDate_Actual" msprop:Generator_ColumnVarNameInTable="columnFILastDate_Actual" msprop:Generator_ColumnPropNameInRow="FILastDate_Actual" msprop:Generator_ColumnPropNameInTable="FILastDate_ActualColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FILastQuantity_Actual" msprop:Generator_UserColumnName="FILastQuantity_Actual" msprop:Generator_ColumnVarNameInTable="columnFILastQuantity_Actual" msprop:Generator_ColumnPropNameInRow="FILastQuantity_Actual" msprop:Generator_ColumnPropNameInTable="FILastQuantity_ActualColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FIInsBalance_Actual" msprop:Generator_UserColumnName="FIInsBalance_Actual" msprop:Generator_ColumnVarNameInTable="columnFIInsBalance_Actual" msprop:Generator_ColumnPropNameInRow="FIInsBalance_Actual" msprop:Generator_ColumnPropNameInTable="FIInsBalance_ActualColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FIIsComplete" msprop:Generator_UserColumnName="FIIsComplete" msprop:Generator_ColumnVarNameInTable="columnFIIsComplete" msprop:Generator_ColumnPropNameInRow="FIIsComplete" msprop:Generator_ColumnPropNameInTable="FIIsCompleteColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="DStartDate_Plan" msprop:Generator_UserColumnName="DStartDate_Plan" msprop:Generator_ColumnVarNameInTable="columnDStartDate_Plan" msprop:Generator_ColumnPropNameInRow="DStartDate_Plan" msprop:Generator_ColumnPropNameInTable="DStartDate_PlanColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DStartDyeingQuantity_Plan" msprop:Generator_UserColumnName="DStartDyeingQuantity_Plan" msprop:Generator_ColumnVarNameInTable="columnDStartDyeingQuantity_Plan" msprop:Generator_ColumnPropNameInRow="DStartDyeingQuantity_Plan" msprop:Generator_ColumnPropNameInTable="DStartDyeingQuantity_PlanColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DLastDate_Plan" msprop:Generator_UserColumnName="DLastDate_Plan" msprop:Generator_ColumnVarNameInTable="columnDLastDate_Plan" msprop:Generator_ColumnPropNameInRow="DLastDate_Plan" msprop:Generator_ColumnPropNameInTable="DLastDate_PlanColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DLastDyeingQuantity_Plan" msprop:Generator_UserColumnName="DLastDyeingQuantity_Plan" msprop:Generator_ColumnVarNameInTable="columnDLastDyeingQuantity_Plan" msprop:Generator_ColumnPropNameInRow="DLastDyeingQuantity_Plan" msprop:Generator_ColumnPropNameInTable="DLastDyeingQuantity_PlanColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DDyeingBalance_Plan" msprop:Generator_UserColumnName="DDyeingBalance_Plan" msprop:Generator_ColumnVarNameInTable="columnDDyeingBalance_Plan" msprop:Generator_ColumnPropNameInRow="DDyeingBalance_Plan" msprop:Generator_ColumnPropNameInTable="DDyeingBalance_PlanColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DStartDate_Actual" msprop:Generator_UserColumnName="DStartDate_Actual" msprop:Generator_ColumnVarNameInTable="columnDStartDate_Actual" msprop:Generator_ColumnPropNameInRow="DStartDate_Actual" msprop:Generator_ColumnPropNameInTable="DStartDate_ActualColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DStartDyeingQuantity_Actual" msprop:Generator_UserColumnName="DStartDyeingQuantity_Actual" msprop:Generator_ColumnVarNameInTable="columnDStartDyeingQuantity_Actual" msprop:Generator_ColumnPropNameInRow="DStartDyeingQuantity_Actual" msprop:Generator_ColumnPropNameInTable="DStartDyeingQuantity_ActualColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DLastDate_Actual" msprop:Generator_UserColumnName="DLastDate_Actual" msprop:Generator_ColumnVarNameInTable="columnDLastDate_Actual" msprop:Generator_ColumnPropNameInRow="DLastDate_Actual" msprop:Generator_ColumnPropNameInTable="DLastDate_ActualColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DLastDyeingQuantity_Actual" msprop:Generator_UserColumnName="DLastDyeingQuantity_Actual" msprop:Generator_ColumnVarNameInTable="columnDLastDyeingQuantity_Actual" msprop:Generator_ColumnPropNameInRow="DLastDyeingQuantity_Actual" msprop:Generator_ColumnPropNameInTable="DLastDyeingQuantity_ActualColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DDyeingBalance_Actual" msprop:Generator_UserColumnName="DDyeingBalance_Actual" msprop:Generator_ColumnVarNameInTable="columnDDyeingBalance_Actual" msprop:Generator_ColumnPropNameInRow="DDyeingBalance_Actual" msprop:Generator_ColumnPropNameInTable="DDyeingBalance_ActualColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DIsComplete" msprop:Generator_UserColumnName="DIsComplete" msprop:Generator_ColumnVarNameInTable="columnDIsComplete" msprop:Generator_ColumnPropNameInRow="DIsComplete" msprop:Generator_ColumnPropNameInTable="DIsCompleteColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="BStartDate_Plan" msprop:Generator_UserColumnName="BStartDate_Plan" msprop:Generator_ColumnVarNameInTable="columnBStartDate_Plan" msprop:Generator_ColumnPropNameInRow="BStartDate_Plan" msprop:Generator_ColumnPropNameInTable="BStartDate_PlanColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BStartBatchQuantity_Plan" msprop:Generator_UserColumnName="BStartBatchQuantity_Plan" msprop:Generator_ColumnVarNameInTable="columnBStartBatchQuantity_Plan" msprop:Generator_ColumnPropNameInRow="BStartBatchQuantity_Plan" msprop:Generator_ColumnPropNameInTable="BStartBatchQuantity_PlanColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BLastDate_Plan" msprop:Generator_UserColumnName="BLastDate_Plan" msprop:Generator_ColumnVarNameInTable="columnBLastDate_Plan" msprop:Generator_ColumnPropNameInRow="BLastDate_Plan" msprop:Generator_ColumnPropNameInTable="BLastDate_PlanColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BLastBatchQuantity_Plan" msprop:Generator_UserColumnName="BLastBatchQuantity_Plan" msprop:Generator_ColumnVarNameInTable="columnBLastBatchQuantity_Plan" msprop:Generator_ColumnPropNameInRow="BLastBatchQuantity_Plan" msprop:Generator_ColumnPropNameInTable="BLastBatchQuantity_PlanColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BBatchBalance_Plan" msprop:Generator_UserColumnName="BBatchBalance_Plan" msprop:Generator_ColumnVarNameInTable="columnBBatchBalance_Plan" msprop:Generator_ColumnPropNameInRow="BBatchBalance_Plan" msprop:Generator_ColumnPropNameInTable="BBatchBalance_PlanColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BStartDate_Actual" msprop:Generator_UserColumnName="BStartDate_Actual" msprop:Generator_ColumnVarNameInTable="columnBStartDate_Actual" msprop:Generator_ColumnPropNameInRow="BStartDate_Actual" msprop:Generator_ColumnPropNameInTable="BStartDate_ActualColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BStartBatchQuantity_Actual" msprop:Generator_UserColumnName="BStartBatchQuantity_Actual" msprop:Generator_ColumnVarNameInTable="columnBStartBatchQuantity_Actual" msprop:Generator_ColumnPropNameInRow="BStartBatchQuantity_Actual" msprop:Generator_ColumnPropNameInTable="BStartBatchQuantity_ActualColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BLastDate_Actual" msprop:Generator_UserColumnName="BLastDate_Actual" msprop:Generator_ColumnVarNameInTable="columnBLastDate_Actual" msprop:Generator_ColumnPropNameInRow="BLastDate_Actual" msprop:Generator_ColumnPropNameInTable="BLastDate_ActualColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BLastBatchQuantity_Actual" msprop:Generator_UserColumnName="BLastBatchQuantity_Actual" msprop:Generator_ColumnVarNameInTable="columnBLastBatchQuantity_Actual" msprop:Generator_ColumnPropNameInRow="BLastBatchQuantity_Actual" msprop:Generator_ColumnPropNameInTable="BLastBatchQuantity_ActualColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BBatchBalance_Actual" msprop:Generator_UserColumnName="BBatchBalance_Actual" msprop:Generator_ColumnVarNameInTable="columnBBatchBalance_Actual" msprop:Generator_ColumnPropNameInRow="BBatchBalance_Actual" msprop:Generator_ColumnPropNameInTable="BBatchBalance_ActualColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BIsCompleted" msprop:Generator_UserColumnName="BIsCompleted" msprop:Generator_ColumnVarNameInTable="columnBIsCompleted" msprop:Generator_ColumnPropNameInRow="BIsCompleted" msprop:Generator_ColumnPropNameInTable="BIsCompletedColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="FStartDate_Plan" msprop:Generator_UserColumnName="FStartDate_Plan" msprop:Generator_ColumnVarNameInTable="columnFStartDate_Plan" msprop:Generator_ColumnPropNameInRow="FStartDate_Plan" msprop:Generator_ColumnPropNameInTable="FStartDate_PlanColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FStartFinishQuantity_Plan" msprop:Generator_UserColumnName="FStartFinishQuantity_Plan" msprop:Generator_ColumnVarNameInTable="columnFStartFinishQuantity_Plan" msprop:Generator_ColumnPropNameInRow="FStartFinishQuantity_Plan" msprop:Generator_ColumnPropNameInTable="FStartFinishQuantity_PlanColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FLastDate_Plan" msprop:Generator_UserColumnName="FLastDate_Plan" msprop:Generator_ColumnVarNameInTable="columnFLastDate_Plan" msprop:Generator_ColumnPropNameInRow="FLastDate_Plan" msprop:Generator_ColumnPropNameInTable="FLastDate_PlanColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FLastFinishQuantity_Plan" msprop:Generator_UserColumnName="FLastFinishQuantity_Plan" msprop:Generator_ColumnVarNameInTable="columnFLastFinishQuantity_Plan" msprop:Generator_ColumnPropNameInRow="FLastFinishQuantity_Plan" msprop:Generator_ColumnPropNameInTable="FLastFinishQuantity_PlanColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FinishBalance_Plan" msprop:Generator_UserColumnName="FinishBalance_Plan" msprop:Generator_ColumnVarNameInTable="columnFinishBalance_Plan" msprop:Generator_ColumnPropNameInRow="FinishBalance_Plan" msprop:Generator_ColumnPropNameInTable="FinishBalance_PlanColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FStartDate_Actual" msprop:Generator_UserColumnName="FStartDate_Actual" msprop:Generator_ColumnVarNameInTable="columnFStartDate_Actual" msprop:Generator_ColumnPropNameInRow="FStartDate_Actual" msprop:Generator_ColumnPropNameInTable="FStartDate_ActualColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FStartFinishQuantity_Actual" msprop:Generator_UserColumnName="FStartFinishQuantity_Actual" msprop:Generator_ColumnVarNameInTable="columnFStartFinishQuantity_Actual" msprop:Generator_ColumnPropNameInRow="FStartFinishQuantity_Actual" msprop:Generator_ColumnPropNameInTable="FStartFinishQuantity_ActualColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FLastDate_Actual" msprop:Generator_UserColumnName="FLastDate_Actual" msprop:Generator_ColumnVarNameInTable="columnFLastDate_Actual" msprop:Generator_ColumnPropNameInRow="FLastDate_Actual" msprop:Generator_ColumnPropNameInTable="FLastDate_ActualColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FLastFinishQuantity_Actual" msprop:Generator_UserColumnName="FLastFinishQuantity_Actual" msprop:Generator_ColumnVarNameInTable="columnFLastFinishQuantity_Actual" msprop:Generator_ColumnPropNameInRow="FLastFinishQuantity_Actual" msprop:Generator_ColumnPropNameInTable="FLastFinishQuantity_ActualColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FFinishBalance_Actual" msprop:Generator_UserColumnName="FFinishBalance_Actual" msprop:Generator_ColumnVarNameInTable="columnFFinishBalance_Actual" msprop:Generator_ColumnPropNameInRow="FFinishBalance_Actual" msprop:Generator_ColumnPropNameInTable="FFinishBalance_ActualColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FIsComplete" msprop:Generator_UserColumnName="FIsComplete" msprop:Generator_ColumnVarNameInTable="columnFIsComplete" msprop:Generator_ColumnPropNameInRow="FIsComplete" msprop:Generator_ColumnPropNameInTable="FIsCompleteColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="FSFirstReceivedDate_Plan" msprop:Generator_UserColumnName="FSFirstReceivedDate_Plan" msprop:Generator_ColumnVarNameInTable="columnFSFirstReceivedDate_Plan" msprop:Generator_ColumnPropNameInRow="FSFirstReceivedDate_Plan" msprop:Generator_ColumnPropNameInTable="FSFirstReceivedDate_PlanColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FSReceiveQuantity_Plan" msprop:Generator_UserColumnName="FSReceiveQuantity_Plan" msprop:Generator_ColumnVarNameInTable="columnFSReceiveQuantity_Plan" msprop:Generator_ColumnPropNameInRow="FSReceiveQuantity_Plan" msprop:Generator_ColumnPropNameInTable="FSReceiveQuantity_PlanColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FSLastReceivedDate_Plan" msprop:Generator_UserColumnName="FSLastReceivedDate_Plan" msprop:Generator_ColumnVarNameInTable="columnFSLastReceivedDate_Plan" msprop:Generator_ColumnPropNameInRow="FSLastReceivedDate_Plan" msprop:Generator_ColumnPropNameInTable="FSLastReceivedDate_PlanColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FSLastReceiveQuantity_Plan" msprop:Generator_UserColumnName="FSLastReceiveQuantity_Plan" msprop:Generator_ColumnVarNameInTable="columnFSLastReceiveQuantity_Plan" msprop:Generator_ColumnPropNameInRow="FSLastReceiveQuantity_Plan" msprop:Generator_ColumnPropNameInTable="FSLastReceiveQuantity_PlanColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FSReceivedBalance_Plan" msprop:Generator_UserColumnName="FSReceivedBalance_Plan" msprop:Generator_ColumnVarNameInTable="columnFSReceivedBalance_Plan" msprop:Generator_ColumnPropNameInRow="FSReceivedBalance_Plan" msprop:Generator_ColumnPropNameInTable="FSReceivedBalance_PlanColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FSFirstReceivedDate_Actual" msprop:Generator_UserColumnName="FSFirstReceivedDate_Actual" msprop:Generator_ColumnVarNameInTable="columnFSFirstReceivedDate_Actual" msprop:Generator_ColumnPropNameInRow="FSFirstReceivedDate_Actual" msprop:Generator_ColumnPropNameInTable="FSFirstReceivedDate_ActualColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FSReceiveQuantity_Actual" msprop:Generator_UserColumnName="FSReceiveQuantity_Actual" msprop:Generator_ColumnVarNameInTable="columnFSReceiveQuantity_Actual" msprop:Generator_ColumnPropNameInRow="FSReceiveQuantity_Actual" msprop:Generator_ColumnPropNameInTable="FSReceiveQuantity_ActualColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FSLastReceivedDate_Actual" msprop:Generator_UserColumnName="FSLastReceivedDate_Actual" msprop:Generator_ColumnVarNameInTable="columnFSLastReceivedDate_Actual" msprop:Generator_ColumnPropNameInRow="FSLastReceivedDate_Actual" msprop:Generator_ColumnPropNameInTable="FSLastReceivedDate_ActualColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FSLastReceiveQuantity_Actual" msprop:Generator_UserColumnName="FSLastReceiveQuantity_Actual" msprop:Generator_ColumnVarNameInTable="columnFSLastReceiveQuantity_Actual" msprop:Generator_ColumnPropNameInRow="FSLastReceiveQuantity_Actual" msprop:Generator_ColumnPropNameInTable="FSLastReceiveQuantity_ActualColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FSReceivedBalance_Actual" msprop:Generator_UserColumnName="FSReceivedBalance_Actual" msprop:Generator_ColumnVarNameInTable="columnFSReceivedBalance_Actual" msprop:Generator_ColumnPropNameInRow="FSReceivedBalance_Actual" msprop:Generator_ColumnPropNameInTable="FSReceivedBalance_ActualColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FSIsComplete" msprop:Generator_UserColumnName="FSIsComplete" msprop:Generator_ColumnVarNameInTable="columnFSIsComplete" msprop:Generator_ColumnPropNameInRow="FSIsComplete" msprop:Generator_ColumnPropNameInTable="FSIsCompleteColumn" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CriticalPath_FinishFabric_View" />
+      <xs:field xpath="mstns:CriticalPathId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

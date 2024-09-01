@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ExMonthAndYearDataSet" targetNamespace="http://tempuri.org/ExMonthAndYearDataSet.xsd" xmlns:mstns="http://tempuri.org/ExMonthAndYearDataSet.xsd" xmlns="http://tempuri.org/ExMonthAndYearDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_InventoryConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_InventoryConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Inventory.My.MySettings.GlobalReference.Default.KSoft_InventoryConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ExMonthAndYearTableAdapter" GeneratorDataComponentClassName="ExMonthAndYearTableAdapter" Name="ExMonthAndYearTable" UserDataComponentName="ExMonthAndYearTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_InventoryConnectionString (MySettings)" DbObjectName="[echo-printing].dbo.MonthlyExDateWiseOrderQuantity" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ExMonth, ExYear
+FROM            MonthlyExDateWiseOrderQuantity
+WHERE        (MinEx &gt;= CONVERT(DATETIME, '2011-08-01 00:00:00', 102))
+GROUP BY ExMonth, ExYear</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ExMonth" DataSetColumn="ExMonth" />
+              <Mapping SourceColumn="ExYear" DataSetColumn="ExYear" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ExMonthAndYearDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ExMonthAndYearDataSet" msprop:Generator_DataSetName="ExMonthAndYearDataSet" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ExMonthAndYearTable" msprop:Generator_UserTableName="ExMonthAndYearTable" msprop:Generator_RowDeletedName="ExMonthAndYearTableRowDeleted" msprop:Generator_RowChangedName="ExMonthAndYearTableRowChanged" msprop:Generator_RowClassName="ExMonthAndYearTableRow" msprop:Generator_RowChangingName="ExMonthAndYearTableRowChanging" msprop:Generator_RowEvArgName="ExMonthAndYearTableRowChangeEvent" msprop:Generator_RowEvHandlerName="ExMonthAndYearTableRowChangeEventHandler" msprop:Generator_TableClassName="ExMonthAndYearTableDataTable" msprop:Generator_TableVarName="tableExMonthAndYearTable" msprop:Generator_RowDeletingName="ExMonthAndYearTableRowDeleting" msprop:Generator_TablePropName="ExMonthAndYearTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ExMonth" msprop:Generator_UserColumnName="ExMonth" msprop:Generator_ColumnPropNameInRow="ExMonth" msprop:Generator_ColumnVarNameInTable="columnExMonth" msprop:Generator_ColumnPropNameInTable="ExMonthColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ExYear" msprop:Generator_UserColumnName="ExYear" msprop:Generator_ColumnPropNameInRow="ExYear" msprop:Generator_ColumnVarNameInTable="columnExYear" msprop:Generator_ColumnPropNameInTable="ExYearColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ExMonthAndYear" msdata:ReadOnly="true" msdata:Expression="ExMonth +'/'+ExYear" msprop:Generator_UserColumnName="ExMonthAndYear" msprop:Generator_ColumnVarNameInTable="columnExMonthAndYear" msprop:Generator_ColumnPropNameInRow="ExMonthAndYear" msprop:Generator_ColumnPropNameInTable="ExMonthAndYearColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

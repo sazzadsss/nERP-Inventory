@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="FinishFabricBookingViewDataSet" targetNamespace="http://tempuri.org/FinishFabricBookingViewDataSet.xsd" xmlns:mstns="http://tempuri.org/FinishFabricBookingViewDataSet.xsd" xmlns="http://tempuri.org/FinishFabricBookingViewDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_InventoryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_InventoryConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Inventory.My.MySettings.GlobalReference.Default.KSoft_InventoryConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FinishFabricBookingViewTableAdapter" GeneratorDataComponentClassName="FinishFabricBookingViewTableAdapter" Name="FinishFabricBookingView" UserDataComponentName="FinishFabricBookingViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_InventoryConnectionString (MySettings)" DbObjectName="[echo-printing].dbo.FinishFabricBookingView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        FinishFabricBookingId, ProgramNo, BookingDate, Remarks, SupplierId, AmendmentNo, AmendmentDate, CompanyId, CustomerId, IsPrint, PrintDetails, WashDetails, 
+                         SampleReference, IsAOP, AOPDetails, FabricRequireDate, FinishFabricBookingDetailsId, FabricColorId, KnittingTypeId, GarmentsPartId, ShadeReference, FGSM, 
+                         Consumption, Dia, CompositionId, DiaType, DUnit, YarnAllocation, FinishFabricBookingQuantity, FinishUnit, GreyFabricBookingQuantity, FabricColorName, 
+                         BuyerName, StyleName
+FROM            FinishFabricBookingView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FinishFabricBookingId" DataSetColumn="FinishFabricBookingId" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="BookingDate" DataSetColumn="BookingDate" />
+              <Mapping SourceColumn="Remarks" DataSetColumn="Remarks" />
+              <Mapping SourceColumn="SupplierId" DataSetColumn="SupplierId" />
+              <Mapping SourceColumn="AmendmentNo" DataSetColumn="AmendmentNo" />
+              <Mapping SourceColumn="AmendmentDate" DataSetColumn="AmendmentDate" />
+              <Mapping SourceColumn="CompanyId" DataSetColumn="CompanyId" />
+              <Mapping SourceColumn="CustomerId" DataSetColumn="CustomerId" />
+              <Mapping SourceColumn="IsPrint" DataSetColumn="IsPrint" />
+              <Mapping SourceColumn="PrintDetails" DataSetColumn="PrintDetails" />
+              <Mapping SourceColumn="WashDetails" DataSetColumn="WashDetails" />
+              <Mapping SourceColumn="SampleReference" DataSetColumn="SampleReference" />
+              <Mapping SourceColumn="IsAOP" DataSetColumn="IsAOP" />
+              <Mapping SourceColumn="AOPDetails" DataSetColumn="AOPDetails" />
+              <Mapping SourceColumn="FabricRequireDate" DataSetColumn="FabricRequireDate" />
+              <Mapping SourceColumn="FinishFabricBookingDetailsId" DataSetColumn="FinishFabricBookingDetailsId" />
+              <Mapping SourceColumn="FabricColorId" DataSetColumn="FabricColorId" />
+              <Mapping SourceColumn="KnittingTypeId" DataSetColumn="KnittingTypeId" />
+              <Mapping SourceColumn="GarmentsPartId" DataSetColumn="GarmentsPartId" />
+              <Mapping SourceColumn="ShadeReference" DataSetColumn="ShadeReference" />
+              <Mapping SourceColumn="FGSM" DataSetColumn="FGSM" />
+              <Mapping SourceColumn="Consumption" DataSetColumn="Consumption" />
+              <Mapping SourceColumn="Dia" DataSetColumn="Dia" />
+              <Mapping SourceColumn="CompositionId" DataSetColumn="CompositionId" />
+              <Mapping SourceColumn="DiaType" DataSetColumn="DiaType" />
+              <Mapping SourceColumn="DUnit" DataSetColumn="DUnit" />
+              <Mapping SourceColumn="YarnAllocation" DataSetColumn="YarnAllocation" />
+              <Mapping SourceColumn="FinishFabricBookingQuantity" DataSetColumn="FinishFabricBookingQuantity" />
+              <Mapping SourceColumn="FinishUnit" DataSetColumn="FinishUnit" />
+              <Mapping SourceColumn="GreyFabricBookingQuantity" DataSetColumn="GreyFabricBookingQuantity" />
+              <Mapping SourceColumn="FabricColorName" DataSetColumn="FabricColorName" />
+              <Mapping SourceColumn="BuyerName" DataSetColumn="BuyerName" />
+              <Mapping SourceColumn="StyleName" DataSetColumn="StyleName" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_InventoryConnectionString (MySettings)" DbObjectName="[echo-printing].dbo.FinishFabricBookingView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByFabricColorName" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByFabricColorName" GeneratorSourceName="FillByFabricColorName" GetMethodModifier="Public" GetMethodName="GetDataByFabricColorName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByFabricColorName" UserSourceName="FillByFabricColorName">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT AOPDetails, AmendmentDate, AmendmentNo, BookingDate, BuyerName, CompanyId, CompositionId, Consumption, CustomerId, DUnit, Dia, DiaType, FGSM, FabricColorId, FabricColorName, FabricRequireDate, FinishFabricBookingDetailsId, FinishFabricBookingId, FinishFabricBookingQuantity, FinishUnit, GarmentsPartId, GreyFabricBookingQuantity, IsAOP, IsPrint, KnittingTypeId, PrintDetails, ProgramNo, Remarks, SampleReference, ShadeReference, StyleName, SupplierId, WashDetails, YarnAllocation FROM FinishFabricBookingView WHERE (ProgramNo = @ProgramNo) AND (FabricColorName = @FabricColorName) AND (AmendmentNo = @AmendmentNo)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="ProgramNo" ColumnName="ProgramNo" DataSourceName="[echo-printing].dbo.FinishFabricBookingView" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@ProgramNo" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="ProgramNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="FabricColorName" ColumnName="FabricColorName" DataSourceName="[echo-printing].dbo.FinishFabricBookingView" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@FabricColorName" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="FabricColorName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="AmendmentNo" ColumnName="AmendmentNo" DataSourceName="[echo-printing].dbo.FinishFabricBookingView" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@AmendmentNo" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="AmendmentNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="FinishFabricBookingViewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="FinishFabricBookingViewDataSet" msprop:Generator_DataSetName="FinishFabricBookingViewDataSet" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FinishFabricBookingView" msprop:Generator_UserTableName="FinishFabricBookingView" msprop:Generator_RowDeletedName="FinishFabricBookingViewRowDeleted" msprop:Generator_RowChangedName="FinishFabricBookingViewRowChanged" msprop:Generator_RowClassName="FinishFabricBookingViewRow" msprop:Generator_RowChangingName="FinishFabricBookingViewRowChanging" msprop:Generator_RowEvArgName="FinishFabricBookingViewRowChangeEvent" msprop:Generator_RowEvHandlerName="FinishFabricBookingViewRowChangeEventHandler" msprop:Generator_TableClassName="FinishFabricBookingViewDataTable" msprop:Generator_TableVarName="tableFinishFabricBookingView" msprop:Generator_RowDeletingName="FinishFabricBookingViewRowDeleting" msprop:Generator_TablePropName="FinishFabricBookingView">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FinishFabricBookingId" msprop:Generator_UserColumnName="FinishFabricBookingId" msprop:Generator_ColumnVarNameInTable="columnFinishFabricBookingId" msprop:Generator_ColumnPropNameInRow="FinishFabricBookingId" msprop:Generator_ColumnPropNameInTable="FinishFabricBookingIdColumn" type="xs:long" />
+              <xs:element name="ProgramNo" msprop:Generator_UserColumnName="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BookingDate" msprop:Generator_UserColumnName="BookingDate" msprop:Generator_ColumnVarNameInTable="columnBookingDate" msprop:Generator_ColumnPropNameInRow="BookingDate" msprop:Generator_ColumnPropNameInTable="BookingDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Remarks" msprop:Generator_UserColumnName="Remarks" msprop:Generator_ColumnVarNameInTable="columnRemarks" msprop:Generator_ColumnPropNameInRow="Remarks" msprop:Generator_ColumnPropNameInTable="RemarksColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SupplierId" msprop:Generator_UserColumnName="SupplierId" msprop:Generator_ColumnVarNameInTable="columnSupplierId" msprop:Generator_ColumnPropNameInRow="SupplierId" msprop:Generator_ColumnPropNameInTable="SupplierIdColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="AmendmentNo" msprop:Generator_UserColumnName="AmendmentNo" msprop:Generator_ColumnVarNameInTable="columnAmendmentNo" msprop:Generator_ColumnPropNameInRow="AmendmentNo" msprop:Generator_ColumnPropNameInTable="AmendmentNoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="AmendmentDate" msprop:Generator_UserColumnName="AmendmentDate" msprop:Generator_ColumnVarNameInTable="columnAmendmentDate" msprop:Generator_ColumnPropNameInRow="AmendmentDate" msprop:Generator_ColumnPropNameInTable="AmendmentDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CompanyId" msprop:Generator_UserColumnName="CompanyId" msprop:Generator_ColumnVarNameInTable="columnCompanyId" msprop:Generator_ColumnPropNameInRow="CompanyId" msprop:Generator_ColumnPropNameInTable="CompanyIdColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="CustomerId" msprop:Generator_UserColumnName="CustomerId" msprop:Generator_ColumnVarNameInTable="columnCustomerId" msprop:Generator_ColumnPropNameInRow="CustomerId" msprop:Generator_ColumnPropNameInTable="CustomerIdColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="IsPrint" msprop:Generator_UserColumnName="IsPrint" msprop:Generator_ColumnVarNameInTable="columnIsPrint" msprop:Generator_ColumnPropNameInRow="IsPrint" msprop:Generator_ColumnPropNameInTable="IsPrintColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PrintDetails" msprop:Generator_UserColumnName="PrintDetails" msprop:Generator_ColumnVarNameInTable="columnPrintDetails" msprop:Generator_ColumnPropNameInRow="PrintDetails" msprop:Generator_ColumnPropNameInTable="PrintDetailsColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WashDetails" msprop:Generator_UserColumnName="WashDetails" msprop:Generator_ColumnVarNameInTable="columnWashDetails" msprop:Generator_ColumnPropNameInRow="WashDetails" msprop:Generator_ColumnPropNameInTable="WashDetailsColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SampleReference" msprop:Generator_UserColumnName="SampleReference" msprop:Generator_ColumnVarNameInTable="columnSampleReference" msprop:Generator_ColumnPropNameInRow="SampleReference" msprop:Generator_ColumnPropNameInTable="SampleReferenceColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsAOP" msprop:Generator_UserColumnName="IsAOP" msprop:Generator_ColumnVarNameInTable="columnIsAOP" msprop:Generator_ColumnPropNameInRow="IsAOP" msprop:Generator_ColumnPropNameInTable="IsAOPColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="AOPDetails" msprop:Generator_UserColumnName="AOPDetails" msprop:Generator_ColumnVarNameInTable="columnAOPDetails" msprop:Generator_ColumnPropNameInRow="AOPDetails" msprop:Generator_ColumnPropNameInTable="AOPDetailsColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FabricRequireDate" msprop:Generator_UserColumnName="FabricRequireDate" msprop:Generator_ColumnVarNameInTable="columnFabricRequireDate" msprop:Generator_ColumnPropNameInRow="FabricRequireDate" msprop:Generator_ColumnPropNameInTable="FabricRequireDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FinishFabricBookingDetailsId" msprop:Generator_UserColumnName="FinishFabricBookingDetailsId" msprop:Generator_ColumnVarNameInTable="columnFinishFabricBookingDetailsId" msprop:Generator_ColumnPropNameInRow="FinishFabricBookingDetailsId" msprop:Generator_ColumnPropNameInTable="FinishFabricBookingDetailsIdColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="FabricColorId" msprop:Generator_UserColumnName="FabricColorId" msprop:Generator_ColumnVarNameInTable="columnFabricColorId" msprop:Generator_ColumnPropNameInRow="FabricColorId" msprop:Generator_ColumnPropNameInTable="FabricColorIdColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="KnittingTypeId" msprop:Generator_UserColumnName="KnittingTypeId" msprop:Generator_ColumnVarNameInTable="columnKnittingTypeId" msprop:Generator_ColumnPropNameInRow="KnittingTypeId" msprop:Generator_ColumnPropNameInTable="KnittingTypeIdColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="GarmentsPartId" msprop:Generator_UserColumnName="GarmentsPartId" msprop:Generator_ColumnVarNameInTable="columnGarmentsPartId" msprop:Generator_ColumnPropNameInRow="GarmentsPartId" msprop:Generator_ColumnPropNameInTable="GarmentsPartIdColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="ShadeReference" msprop:Generator_UserColumnName="ShadeReference" msprop:Generator_ColumnVarNameInTable="columnShadeReference" msprop:Generator_ColumnPropNameInRow="ShadeReference" msprop:Generator_ColumnPropNameInTable="ShadeReferenceColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FGSM" msprop:Generator_UserColumnName="FGSM" msprop:Generator_ColumnVarNameInTable="columnFGSM" msprop:Generator_ColumnPropNameInRow="FGSM" msprop:Generator_ColumnPropNameInTable="FGSMColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Consumption" msprop:Generator_UserColumnName="Consumption" msprop:Generator_ColumnVarNameInTable="columnConsumption" msprop:Generator_ColumnPropNameInRow="Consumption" msprop:Generator_ColumnPropNameInTable="ConsumptionColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Dia" msprop:Generator_UserColumnName="Dia" msprop:Generator_ColumnVarNameInTable="columnDia" msprop:Generator_ColumnPropNameInRow="Dia" msprop:Generator_ColumnPropNameInTable="DiaColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="CompositionId" msprop:Generator_UserColumnName="CompositionId" msprop:Generator_ColumnVarNameInTable="columnCompositionId" msprop:Generator_ColumnPropNameInRow="CompositionId" msprop:Generator_ColumnPropNameInTable="CompositionIdColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="DiaType" msprop:Generator_UserColumnName="DiaType" msprop:Generator_ColumnVarNameInTable="columnDiaType" msprop:Generator_ColumnPropNameInRow="DiaType" msprop:Generator_ColumnPropNameInTable="DiaTypeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DUnit" msprop:Generator_UserColumnName="DUnit" msprop:Generator_ColumnVarNameInTable="columnDUnit" msprop:Generator_ColumnPropNameInRow="DUnit" msprop:Generator_ColumnPropNameInTable="DUnitColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YarnAllocation" msprop:Generator_UserColumnName="YarnAllocation" msprop:Generator_ColumnVarNameInTable="columnYarnAllocation" msprop:Generator_ColumnPropNameInRow="YarnAllocation" msprop:Generator_ColumnPropNameInTable="YarnAllocationColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FinishFabricBookingQuantity" msprop:Generator_UserColumnName="FinishFabricBookingQuantity" msprop:Generator_ColumnVarNameInTable="columnFinishFabricBookingQuantity" msprop:Generator_ColumnPropNameInRow="FinishFabricBookingQuantity" msprop:Generator_ColumnPropNameInTable="FinishFabricBookingQuantityColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FinishUnit" msprop:Generator_UserColumnName="FinishUnit" msprop:Generator_ColumnVarNameInTable="columnFinishUnit" msprop:Generator_ColumnPropNameInRow="FinishUnit" msprop:Generator_ColumnPropNameInTable="FinishUnitColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GreyFabricBookingQuantity" msprop:Generator_UserColumnName="GreyFabricBookingQuantity" msprop:Generator_ColumnVarNameInTable="columnGreyFabricBookingQuantity" msprop:Generator_ColumnPropNameInRow="GreyFabricBookingQuantity" msprop:Generator_ColumnPropNameInTable="GreyFabricBookingQuantityColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FabricColorName" msprop:Generator_UserColumnName="FabricColorName" msprop:Generator_ColumnVarNameInTable="columnFabricColorName" msprop:Generator_ColumnPropNameInRow="FabricColorName" msprop:Generator_ColumnPropNameInTable="FabricColorNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BuyerName" msprop:Generator_UserColumnName="BuyerName" msprop:Generator_ColumnVarNameInTable="columnBuyerName" msprop:Generator_ColumnPropNameInRow="BuyerName" msprop:Generator_ColumnPropNameInTable="BuyerNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StyleName" msprop:Generator_UserColumnName="StyleName" msprop:Generator_ColumnVarNameInTable="columnStyleName" msprop:Generator_ColumnPropNameInRow="StyleName" msprop:Generator_ColumnPropNameInTable="StyleNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AmendmentPendingDataSet" targetNamespace="http://tempuri.org/AmendmentPendingDataSet.xsd" xmlns:mstns="http://tempuri.org/AmendmentPendingDataSet.xsd" xmlns="http://tempuri.org/AmendmentPendingDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_InventoryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_InventoryConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Inventory.My.MySettings.GlobalReference.Default.KSoft_InventoryConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FinishFabricBookingAmendmentPendingTableAdapter" GeneratorDataComponentClassName="FinishFabricBookingAmendmentPendingTableAdapter" Name="FinishFabricBookingAmendmentPending" UserDataComponentName="FinishFabricBookingAmendmentPendingTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_InventoryConnectionString (MySettings)" DbObjectName="[echo-printing].dbo.FinishFabricBookingAmendmentPending" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ProgramNo, AmendmentNo, UpdateAmendmentNo
+FROM            FinishFabricBookingAmendmentPending
+WHERE        (ProgramNo IS NOT NULL)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="AmendmentNo" DataSetColumn="AmendmentNo" />
+              <Mapping SourceColumn="UpdateAmendmentNo" DataSetColumn="UpdateAmendmentNo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FinishFabricBookingReceivePendingTableAdapter" GeneratorDataComponentClassName="FinishFabricBookingReceivePendingTableAdapter" Name="FinishFabricBookingReceivePending" UserDataComponentName="FinishFabricBookingReceivePendingTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_InventoryConnectionString (MySettings)" DbObjectName="[echo-printing].dbo.FinishFabricBookingAmendmentPending" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ProgramNo, UpdateAmendmentNo, AmendmentNo
+FROM            FinishFabricBookingAmendmentPending
+WHERE        (AmendmentNo IS NULL)
+ORDER BY ProgramNo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="UpdateAmendmentNo" DataSetColumn="UpdateAmendmentNo" />
+              <Mapping SourceColumn="AmendmentNo" DataSetColumn="AmendmentNo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AmendmentPendingDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="AmendmentPendingDataSet" msprop:Generator_DataSetName="AmendmentPendingDataSet" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FinishFabricBookingAmendmentPending" msprop:Generator_UserTableName="FinishFabricBookingAmendmentPending" msprop:Generator_RowDeletedName="FinishFabricBookingAmendmentPendingRowDeleted" msprop:Generator_RowChangedName="FinishFabricBookingAmendmentPendingRowChanged" msprop:Generator_RowClassName="FinishFabricBookingAmendmentPendingRow" msprop:Generator_RowChangingName="FinishFabricBookingAmendmentPendingRowChanging" msprop:Generator_RowEvArgName="FinishFabricBookingAmendmentPendingRowChangeEvent" msprop:Generator_RowEvHandlerName="FinishFabricBookingAmendmentPendingRowChangeEventHandler" msprop:Generator_TableClassName="FinishFabricBookingAmendmentPendingDataTable" msprop:Generator_TableVarName="tableFinishFabricBookingAmendmentPending" msprop:Generator_RowDeletingName="FinishFabricBookingAmendmentPendingRowDeleting" msprop:Generator_TablePropName="FinishFabricBookingAmendmentPending">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProgramNo" msprop:Generator_UserColumnName="ProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AmendmentNo" msprop:Generator_UserColumnName="AmendmentNo" msprop:Generator_ColumnPropNameInRow="AmendmentNo" msprop:Generator_ColumnVarNameInTable="columnAmendmentNo" msprop:Generator_ColumnPropNameInTable="AmendmentNoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="UpdateAmendmentNo" msprop:Generator_UserColumnName="UpdateAmendmentNo" msprop:Generator_ColumnPropNameInRow="UpdateAmendmentNo" msprop:Generator_ColumnVarNameInTable="columnUpdateAmendmentNo" msprop:Generator_ColumnPropNameInTable="UpdateAmendmentNoColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FinishFabricBookingReceivePending" msprop:Generator_UserTableName="FinishFabricBookingReceivePending" msprop:Generator_RowDeletedName="FinishFabricBookingReceivePendingRowDeleted" msprop:Generator_RowChangedName="FinishFabricBookingReceivePendingRowChanged" msprop:Generator_RowClassName="FinishFabricBookingReceivePendingRow" msprop:Generator_RowChangingName="FinishFabricBookingReceivePendingRowChanging" msprop:Generator_RowEvArgName="FinishFabricBookingReceivePendingRowChangeEvent" msprop:Generator_RowEvHandlerName="FinishFabricBookingReceivePendingRowChangeEventHandler" msprop:Generator_TableClassName="FinishFabricBookingReceivePendingDataTable" msprop:Generator_TableVarName="tableFinishFabricBookingReceivePending" msprop:Generator_RowDeletingName="FinishFabricBookingReceivePendingRowDeleting" msprop:Generator_TablePropName="FinishFabricBookingReceivePending">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProgramNo" msprop:Generator_UserColumnName="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UpdateAmendmentNo" msprop:Generator_UserColumnName="UpdateAmendmentNo" msprop:Generator_ColumnVarNameInTable="columnUpdateAmendmentNo" msprop:Generator_ColumnPropNameInRow="UpdateAmendmentNo" msprop:Generator_ColumnPropNameInTable="UpdateAmendmentNoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="AmendmentNo" msprop:Generator_UserColumnName="AmendmentNo" msprop:Generator_ColumnVarNameInTable="columnAmendmentNo" msprop:Generator_ColumnPropNameInRow="AmendmentNo" msprop:Generator_ColumnPropNameInTable="AmendmentNoColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

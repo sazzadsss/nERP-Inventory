@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BatchInformationLookupDataSet" targetNamespace="http://tempuri.org/BatchInformationLookupDataSet.xsd" xmlns:mstns="http://tempuri.org/BatchInformationLookupDataSet.xsd" xmlns="http://tempuri.org/BatchInformationLookupDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_InventoryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_InventoryConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Inventory.My.MySettings.GlobalReference.Default.KSoft_InventoryConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BatchInformationLookupTableAdapter" GeneratorDataComponentClassName="BatchInformationLookupTableAdapter" Name="BatchInformationLookup" UserDataComponentName="BatchInformationLookupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_InventoryConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        BatchInformation.BatchNo, BatchInformation.MachineNo, BatchInformation.ProgramNo, BatchInformation.Buyer, BatchInformation.FabricColorName, 
+                         BatchInformation.StyleNo, BatchInformation.ELDNo, BatchInformationDetails.BatchQuantity, BatchInformationDetails.BatchQuantityYrds, 
+                         BatchInformationDetails.Dia, BatchInformationDetails.DiaType, BatchInformationDetails.FinishUnit, Composition.Composition, GarmentsPart.Name, 
+                         KnittingType.KnittingType, BatchInformation.BatchInformationId
+FROM            BatchInformation LEFT OUTER JOIN
+                         BatchInformationDetails ON BatchInformation.BatchInformationId = BatchInformationDetails.BatchInformationId LEFT OUTER JOIN
+                         GarmentsPart ON BatchInformationDetails.GarmentsPartId = GarmentsPart.GarmentsPartId LEFT OUTER JOIN
+                         Composition ON BatchInformationDetails.CompositionId = Composition.CompositionId LEFT OUTER JOIN
+                         KnittingType ON BatchInformationDetails.KnittingTypeId = KnittingType.KnittingTypeId</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="BatchNo" DataSetColumn="BatchNo" />
+              <Mapping SourceColumn="MachineNo" DataSetColumn="MachineNo" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="Buyer" DataSetColumn="Buyer" />
+              <Mapping SourceColumn="FabricColorName" DataSetColumn="FabricColorName" />
+              <Mapping SourceColumn="StyleNo" DataSetColumn="StyleNo" />
+              <Mapping SourceColumn="ELDNo" DataSetColumn="ELDNo" />
+              <Mapping SourceColumn="BatchQuantity" DataSetColumn="BatchQuantity" />
+              <Mapping SourceColumn="BatchQuantityYrds" DataSetColumn="BatchQuantityYrds" />
+              <Mapping SourceColumn="Dia" DataSetColumn="Dia" />
+              <Mapping SourceColumn="DiaType" DataSetColumn="DiaType" />
+              <Mapping SourceColumn="FinishUnit" DataSetColumn="FinishUnit" />
+              <Mapping SourceColumn="Composition" DataSetColumn="Composition" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="KnittingType" DataSetColumn="KnittingType" />
+              <Mapping SourceColumn="BatchInformationId" DataSetColumn="BatchInformationId" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_InventoryConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByBatchNo" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByBatchNo" GeneratorSourceName="FillByBatchNo" GetMethodModifier="Public" GetMethodName="GetDataByBatchNo" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByBatchNo" UserSourceName="FillByBatchNo">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        BatchInformation.BatchNo, BatchInformation.MachineNo, BatchInformation.ProgramNo, BatchInformation.Buyer, BatchInformation.FabricColorName, 
+                         BatchInformation.StyleNo, BatchInformation.ELDNo, BatchInformationDetails.BatchQuantity, BatchInformationDetails.BatchQuantityYrds, 
+                         BatchInformationDetails.Dia, BatchInformationDetails.DiaType, BatchInformationDetails.FinishUnit, Composition.Composition, GarmentsPart.Name, 
+                         KnittingType.KnittingType, BatchInformation.BatchInformationId
+FROM            BatchInformation LEFT OUTER JOIN
+                         BatchInformationDetails ON BatchInformation.BatchInformationId = BatchInformationDetails.BatchInformationId LEFT OUTER JOIN
+                         GarmentsPart ON BatchInformationDetails.GarmentsPartId = GarmentsPart.GarmentsPartId LEFT OUTER JOIN
+                         Composition ON BatchInformationDetails.CompositionId = Composition.CompositionId LEFT OUTER JOIN
+                         KnittingType ON BatchInformationDetails.KnittingTypeId = KnittingType.KnittingTypeId
+WHERE        (BatchInformation.BatchNo = @BatchNo)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="BatchNo" ColumnName="BatchNo" DataSourceName="[echo-printing].dbo.BatchInformation" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@BatchNo" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="BatchNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BatchInformationLookupDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="BatchInformationLookupDataSet" msprop:Generator_DataSetName="BatchInformationLookupDataSet" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BatchInformationLookup" msprop:Generator_UserTableName="BatchInformationLookup" msprop:Generator_RowDeletedName="BatchInformationLookupRowDeleted" msprop:Generator_RowChangedName="BatchInformationLookupRowChanged" msprop:Generator_RowClassName="BatchInformationLookupRow" msprop:Generator_RowChangingName="BatchInformationLookupRowChanging" msprop:Generator_RowEvArgName="BatchInformationLookupRowChangeEvent" msprop:Generator_RowEvHandlerName="BatchInformationLookupRowChangeEventHandler" msprop:Generator_TableClassName="BatchInformationLookupDataTable" msprop:Generator_TableVarName="tableBatchInformationLookup" msprop:Generator_RowDeletingName="BatchInformationLookupRowDeleting" msprop:Generator_TablePropName="BatchInformationLookup">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BatchNo" msprop:Generator_UserColumnName="BatchNo" msprop:Generator_ColumnVarNameInTable="columnBatchNo" msprop:Generator_ColumnPropNameInRow="BatchNo" msprop:Generator_ColumnPropNameInTable="BatchNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MachineNo" msprop:Generator_UserColumnName="MachineNo" msprop:Generator_ColumnVarNameInTable="columnMachineNo" msprop:Generator_ColumnPropNameInRow="MachineNo" msprop:Generator_ColumnPropNameInTable="MachineNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProgramNo" msprop:Generator_UserColumnName="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Buyer" msprop:Generator_UserColumnName="Buyer" msprop:Generator_ColumnVarNameInTable="columnBuyer" msprop:Generator_ColumnPropNameInRow="Buyer" msprop:Generator_ColumnPropNameInTable="BuyerColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FabricColorName" msprop:Generator_UserColumnName="FabricColorName" msprop:Generator_ColumnVarNameInTable="columnFabricColorName" msprop:Generator_ColumnPropNameInRow="FabricColorName" msprop:Generator_ColumnPropNameInTable="FabricColorNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StyleNo" msprop:Generator_UserColumnName="StyleNo" msprop:Generator_ColumnVarNameInTable="columnStyleNo" msprop:Generator_ColumnPropNameInRow="StyleNo" msprop:Generator_ColumnPropNameInTable="StyleNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ELDNo" msprop:Generator_UserColumnName="ELDNo" msprop:Generator_ColumnVarNameInTable="columnELDNo" msprop:Generator_ColumnPropNameInRow="ELDNo" msprop:Generator_ColumnPropNameInTable="ELDNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BatchQuantity" msprop:Generator_UserColumnName="BatchQuantity" msprop:Generator_ColumnVarNameInTable="columnBatchQuantity" msprop:Generator_ColumnPropNameInRow="BatchQuantity" msprop:Generator_ColumnPropNameInTable="BatchQuantityColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BatchQuantityYrds" msprop:Generator_UserColumnName="BatchQuantityYrds" msprop:Generator_ColumnVarNameInTable="columnBatchQuantityYrds" msprop:Generator_ColumnPropNameInRow="BatchQuantityYrds" msprop:Generator_ColumnPropNameInTable="BatchQuantityYrdsColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Dia" msprop:Generator_UserColumnName="Dia" msprop:Generator_ColumnVarNameInTable="columnDia" msprop:Generator_ColumnPropNameInRow="Dia" msprop:Generator_ColumnPropNameInTable="DiaColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DiaType" msprop:Generator_UserColumnName="DiaType" msprop:Generator_ColumnVarNameInTable="columnDiaType" msprop:Generator_ColumnPropNameInRow="DiaType" msprop:Generator_ColumnPropNameInTable="DiaTypeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FinishUnit" msprop:Generator_UserColumnName="FinishUnit" msprop:Generator_ColumnVarNameInTable="columnFinishUnit" msprop:Generator_ColumnPropNameInRow="FinishUnit" msprop:Generator_ColumnPropNameInTable="FinishUnitColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Composition" msprop:Generator_UserColumnName="Composition" msprop:Generator_ColumnVarNameInTable="columnComposition" msprop:Generator_ColumnPropNameInRow="Composition" msprop:Generator_ColumnPropNameInTable="CompositionColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KnittingType" msprop:Generator_UserColumnName="KnittingType" msprop:Generator_ColumnVarNameInTable="columnKnittingType" msprop:Generator_ColumnPropNameInRow="KnittingType" msprop:Generator_ColumnPropNameInTable="KnittingTypeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BatchInformationId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="BatchInformationId" msprop:Generator_ColumnVarNameInTable="columnBatchInformationId" msprop:Generator_ColumnPropNameInRow="BatchInformationId" msprop:Generator_ColumnPropNameInTable="BatchInformationIdColumn" type="xs:long" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

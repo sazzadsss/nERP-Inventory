@@ -1,0 +1,762 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ItemListDataSet" targetNamespace="http://tempuri.org/ItemListDataSet.xsd" xmlns:mstns="http://tempuri.org/ItemListDataSet.xsd" xmlns="http://tempuri.org/ItemListDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_InventoryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_InventoryConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Inventory.My.MySettings.GlobalReference.Default.KSoft_InventoryConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ItemListTableAdapter" GeneratorDataComponentClassName="ItemListTableAdapter" Name="ItemList" UserDataComponentName="ItemListTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_InventoryConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.ItemList" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [ItemList] WHERE (([ItemId] = @Original_ItemId) AND ([ItemName] = @Original_ItemName) AND ((@IsNull_ItemDescription = 1 AND [ItemDescription] IS NULL) OR ([ItemDescription] = @Original_ItemDescription)) AND ((@IsNull_OriginId = 1 AND [OriginId] IS NULL) OR ([OriginId] = @Original_OriginId)) AND ((@IsNull_BrandId = 1 AND [BrandId] IS NULL) OR ([BrandId] = @Original_BrandId)) AND ((@IsNull_CategoryId = 1 AND [CategoryId] IS NULL) OR ([CategoryId] = @Original_CategoryId)) AND ((@IsNull_SubCategoryId = 1 AND [SubCategoryId] IS NULL) OR ([SubCategoryId] = @Original_SubCategoryId)) AND ((@IsNull_UnitId = 1 AND [UnitId] IS NULL) OR ([UnitId] = @Original_UnitId)) AND ((@IsNull_QuantityPerPacket = 1 AND [QuantityPerPacket] IS NULL) OR ([QuantityPerPacket] = @Original_QuantityPerPacket)) AND ([PreviousPrice] = @Original_PreviousPrice) AND ([CurrentPrice] = @Original_CurrentPrice) AND ([DepartmentId] = @Original_DepartmentId) AND ((@IsNull_ReorderLabel = 1 AND [ReorderLabel] IS NULL) OR ([ReorderLabel] = @Original_ReorderLabel)) AND ((@IsNull_ExpireLabel = 1 AND [ExpireLabel] IS NULL) OR ([ExpireLabel] = @Original_ExpireLabel)) AND ((@IsNull_UserLabel = 1 AND [UserLabel] IS NULL) OR ([UserLabel] = @Original_UserLabel)) AND ((@IsNull_Discontinue = 1 AND [Discontinue] IS NULL) OR ([Discontinue] = @Original_Discontinue)) AND ((@IsNull_UserId = 1 AND [UserId] IS NULL) OR ([UserId] = @Original_UserId)) AND ((@IsNull_ModifiedOn = 1 AND [ModifiedOn] IS NULL) OR ([ModifiedOn] = @Original_ModifiedOn)) AND ((@IsNull_PipelineQuantity = 1 AND [PipelineQuantity] IS NULL) OR ([PipelineQuantity] = @Original_PipelineQuantity)) AND ((@IsNull_PipeLineDate = 1 AND [PipeLineDate] IS NULL) OR ([PipeLineDate] = @Original_PipeLineDate)) AND ((@IsNull_DollarPrice = 1 AND [DollarPrice] IS NULL) OR ([DollarPrice] = @Original_DollarPrice)) AND ((@IsNull_AccItemName = 1 AND [AccItemName] IS NULL) OR ([AccItemName] = @Original_AccItemName)) AND ((@IsNull_AccBuyerId = 1 AND [AccBuyerId] IS NULL) OR ([AccBuyerId] = @Original_AccBuyerId)) AND ((@IsNull_AccItemStyleId = 1 AND [AccItemStyleId] IS NULL) OR ([AccItemStyleId] = @Original_AccItemStyleId)) AND ((@IsNull_AccItemStyle = 1 AND [AccItemStyle] IS NULL) OR ([AccItemStyle] = @Original_AccItemStyle)) AND ((@IsNull_YarnTypeId = 1 AND [YarnTypeId] IS NULL) OR ([YarnTypeId] = @Original_YarnTypeId)) AND ((@IsNull_YarnCount = 1 AND [YarnCount] IS NULL) OR ([YarnCount] = @Original_YarnCount)) AND ((@IsNull_YarnQuality = 1 AND [YarnQuality] IS NULL) OR ([YarnQuality] = @Original_YarnQuality)) AND ((@IsNull_YarnLotNo = 1 AND [YarnLotNo] IS NULL) OR ([YarnLotNo] = @Original_YarnLotNo)) AND ((@IsNull_IsCertify = 1 AND [IsCertify] IS NULL) OR ([IsCertify] = @Original_IsCertify)) AND ((@IsNull_AccessoriesId = 1 AND [AccessoriesId] IS NULL) OR ([AccessoriesId] = @Original_AccessoriesId)) AND ((@IsNull_PreItemId = 1 AND [PreItemId] IS NULL) OR ([PreItemId] = @Original_PreItemId)) AND ((@IsNull_AvgPrice = 1 AND [AvgPrice] IS NULL) OR ([AvgPrice] = @Original_AvgPrice)) AND ((@IsNull_PackType = 1 AND [PackType] IS NULL) OR ([PackType] = @Original_PackType)) AND ((@IsNull_CurrencyId = 1 AND [CurrencyId] IS NULL) OR ([CurrencyId] = @Original_CurrencyId)) AND ((@IsNull_YDOrderDetailsId = 1 AND [YDOrderDetailsId] IS NULL) OR ([YDOrderDetailsId] = @Original_YDOrderDetailsId)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_ItemId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="ItemId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ItemDescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ItemDescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ItemDescription" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemDescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OriginId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OriginId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_OriginId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="OriginId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_BrandId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BrandId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_BrandId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="BrandId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CategoryId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CategoryId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_CategoryId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="CategoryId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SubCategoryId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SubCategoryId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_SubCategoryId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="SubCategoryId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UnitId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UnitId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_UnitId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="UnitId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_QuantityPerPacket" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="QuantityPerPacket" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_QuantityPerPacket" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="QuantityPerPacket" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_PreviousPrice" Precision="18" ProviderType="Decimal" Scale="5" Size="0" SourceColumn="PreviousPrice" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_CurrentPrice" Precision="18" ProviderType="Decimal" Scale="5" Size="0" SourceColumn="CurrentPrice" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_DepartmentId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="DepartmentId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ReorderLabel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ReorderLabel" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_ReorderLabel" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="ReorderLabel" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ExpireLabel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ExpireLabel" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_ExpireLabel" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="ExpireLabel" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UserLabel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UserLabel" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_UserLabel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UserLabel" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Discontinue" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Discontinue" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_Discontinue" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Discontinue" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UserId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UserId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_UserId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ModifiedOn" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ModifiedOn" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_ModifiedOn" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="ModifiedOn" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PipelineQuantity" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PipelineQuantity" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_PipelineQuantity" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="PipelineQuantity" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PipeLineDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PipeLineDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_PipeLineDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="PipeLineDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DollarPrice" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DollarPrice" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_DollarPrice" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="DollarPrice" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccItemName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccItemName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_AccItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AccItemName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccBuyerId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccBuyerId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_AccBuyerId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccBuyerId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccItemStyleId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccItemStyleId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_AccItemStyleId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccItemStyleId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccItemStyle" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccItemStyle" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_AccItemStyle" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AccItemStyle" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YarnTypeId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YarnTypeId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_YarnTypeId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="YarnTypeId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YarnCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YarnCount" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_YarnCount" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="YarnCount" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YarnQuality" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YarnQuality" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_YarnQuality" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="YarnQuality" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YarnLotNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YarnLotNo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_YarnLotNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="YarnLotNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsCertify" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsCertify" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsCertify" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsCertify" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccessoriesId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccessoriesId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_AccessoriesId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PreItemId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PreItemId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_PreItemId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="PreItemId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AvgPrice" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AvgPrice" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_AvgPrice" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="AvgPrice" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PackType" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PackType" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_PackType" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PackType" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CurrencyId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CurrencyId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CurrencyId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CurrencyId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YDOrderDetailsId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YDOrderDetailsId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_YDOrderDetailsId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="YDOrderDetailsId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [ItemList] ([ItemName], [ItemDescription], [OriginId], [BrandId], [CategoryId], [SubCategoryId], [UnitId], [QuantityPerPacket], [PreviousPrice], [CurrentPrice], [DepartmentId], [ReorderLabel], [ExpireLabel], [UserLabel], [Discontinue], [UserId], [ModifiedOn], [PipelineQuantity], [PipeLineDate], [DollarPrice], [AccItemName], [AccBuyerId], [AccItemStyleId], [AccItemStyle], [YarnTypeId], [YarnCount], [YarnQuality], [YarnLotNo], [IsCertify], [AccessoriesId], [PreItemId], [AvgPrice], [PackType], [CurrencyId], [YDOrderDetailsId]) VALUES (@ItemName, @ItemDescription, @OriginId, @BrandId, @CategoryId, @SubCategoryId, @UnitId, @QuantityPerPacket, @PreviousPrice, @CurrentPrice, @DepartmentId, @ReorderLabel, @ExpireLabel, @UserLabel, @Discontinue, @UserId, @ModifiedOn, @PipelineQuantity, @PipeLineDate, @DollarPrice, @AccItemName, @AccBuyerId, @AccItemStyleId, @AccItemStyle, @YarnTypeId, @YarnCount, @YarnQuality, @YarnLotNo, @IsCertify, @AccessoriesId, @PreItemId, @AvgPrice, @PackType, @CurrencyId, @YDOrderDetailsId);
+SELECT ItemId, ItemName, ItemDescription, OriginId, BrandId, CategoryId, SubCategoryId, UnitId, QuantityPerPacket, PreviousPrice, CurrentPrice, DepartmentId, ReorderLabel, ExpireLabel, UserLabel, Discontinue, UserId, ModifiedOn, PipelineQuantity, PipeLineDate, DollarPrice, AccItemName, AccBuyerId, AccItemStyleId, AccItemStyle, YarnTypeId, YarnCount, YarnQuality, YarnLotNo, IsCertify, AccessoriesId, PreItemId, AvgPrice, PackType, CurrencyId, YDOrderDetailsId FROM ItemList WHERE (ItemId = SCOPE_IDENTITY()) ORDER BY ItemName, ItemId</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ItemDescription" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@OriginId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="OriginId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@BrandId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="BrandId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@CategoryId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="CategoryId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@SubCategoryId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="SubCategoryId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@UnitId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="UnitId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@QuantityPerPacket" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="QuantityPerPacket" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@PreviousPrice" Precision="18" ProviderType="Decimal" Scale="5" Size="0" SourceColumn="PreviousPrice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@CurrentPrice" Precision="18" ProviderType="Decimal" Scale="5" Size="0" SourceColumn="CurrentPrice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@DepartmentId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="DepartmentId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@ReorderLabel" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="ReorderLabel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@ExpireLabel" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="ExpireLabel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UserLabel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UserLabel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Discontinue" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Discontinue" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@ModifiedOn" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="ModifiedOn" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@PipelineQuantity" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="PipelineQuantity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@PipeLineDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="PipeLineDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@DollarPrice" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="DollarPrice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@AccItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AccItemName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@AccBuyerId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccBuyerId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@AccItemStyleId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccItemStyleId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@AccItemStyle" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AccItemStyle" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@YarnTypeId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="YarnTypeId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@YarnCount" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="YarnCount" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@YarnQuality" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="YarnQuality" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@YarnLotNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="YarnLotNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsCertify" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsCertify" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@AccessoriesId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@PreItemId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="PreItemId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@AvgPrice" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="AvgPrice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@PackType" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PackType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@CurrencyId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CurrencyId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@YDOrderDetailsId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="YDOrderDetailsId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ItemId, ItemName, ItemDescription, OriginId, BrandId, CategoryId, SubCategoryId, UnitId, QuantityPerPacket, PreviousPrice, CurrentPrice, DepartmentId, ReorderLabel, ExpireLabel, UserLabel, Discontinue, UserId, ModifiedOn, 
+                         PipelineQuantity, PipeLineDate, DollarPrice, AccItemName, AccBuyerId, AccItemStyleId, AccItemStyle, YarnTypeId, YarnCount, YarnQuality, YarnLotNo, IsCertify, AccessoriesId, PreItemId, AvgPrice, PackType, CurrencyId, 
+                         YDOrderDetailsId
+FROM            ItemList
+ORDER BY ItemName, ItemId</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [ItemList] SET [ItemName] = @ItemName, [ItemDescription] = @ItemDescription, [OriginId] = @OriginId, [BrandId] = @BrandId, [CategoryId] = @CategoryId, [SubCategoryId] = @SubCategoryId, [UnitId] = @UnitId, [QuantityPerPacket] = @QuantityPerPacket, [PreviousPrice] = @PreviousPrice, [CurrentPrice] = @CurrentPrice, [DepartmentId] = @DepartmentId, [ReorderLabel] = @ReorderLabel, [ExpireLabel] = @ExpireLabel, [UserLabel] = @UserLabel, [Discontinue] = @Discontinue, [UserId] = @UserId, [ModifiedOn] = @ModifiedOn, [PipelineQuantity] = @PipelineQuantity, [PipeLineDate] = @PipeLineDate, [DollarPrice] = @DollarPrice, [AccItemName] = @AccItemName, [AccBuyerId] = @AccBuyerId, [AccItemStyleId] = @AccItemStyleId, [AccItemStyle] = @AccItemStyle, [YarnTypeId] = @YarnTypeId, [YarnCount] = @YarnCount, [YarnQuality] = @YarnQuality, [YarnLotNo] = @YarnLotNo, [IsCertify] = @IsCertify, [AccessoriesId] = @AccessoriesId, [PreItemId] = @PreItemId, [AvgPrice] = @AvgPrice, [PackType] = @PackType, [CurrencyId] = @CurrencyId, [YDOrderDetailsId] = @YDOrderDetailsId WHERE (([ItemId] = @Original_ItemId) AND ([ItemName] = @Original_ItemName) AND ((@IsNull_ItemDescription = 1 AND [ItemDescription] IS NULL) OR ([ItemDescription] = @Original_ItemDescription)) AND ((@IsNull_OriginId = 1 AND [OriginId] IS NULL) OR ([OriginId] = @Original_OriginId)) AND ((@IsNull_BrandId = 1 AND [BrandId] IS NULL) OR ([BrandId] = @Original_BrandId)) AND ((@IsNull_CategoryId = 1 AND [CategoryId] IS NULL) OR ([CategoryId] = @Original_CategoryId)) AND ((@IsNull_SubCategoryId = 1 AND [SubCategoryId] IS NULL) OR ([SubCategoryId] = @Original_SubCategoryId)) AND ((@IsNull_UnitId = 1 AND [UnitId] IS NULL) OR ([UnitId] = @Original_UnitId)) AND ((@IsNull_QuantityPerPacket = 1 AND [QuantityPerPacket] IS NULL) OR ([QuantityPerPacket] = @Original_QuantityPerPacket)) AND ([PreviousPrice] = @Original_PreviousPrice) AND ([CurrentPrice] = @Original_CurrentPrice) AND ([DepartmentId] = @Original_DepartmentId) AND ((@IsNull_ReorderLabel = 1 AND [ReorderLabel] IS NULL) OR ([ReorderLabel] = @Original_ReorderLabel)) AND ((@IsNull_ExpireLabel = 1 AND [ExpireLabel] IS NULL) OR ([ExpireLabel] = @Original_ExpireLabel)) AND ((@IsNull_UserLabel = 1 AND [UserLabel] IS NULL) OR ([UserLabel] = @Original_UserLabel)) AND ((@IsNull_Discontinue = 1 AND [Discontinue] IS NULL) OR ([Discontinue] = @Original_Discontinue)) AND ((@IsNull_UserId = 1 AND [UserId] IS NULL) OR ([UserId] = @Original_UserId)) AND ((@IsNull_ModifiedOn = 1 AND [ModifiedOn] IS NULL) OR ([ModifiedOn] = @Original_ModifiedOn)) AND ((@IsNull_PipelineQuantity = 1 AND [PipelineQuantity] IS NULL) OR ([PipelineQuantity] = @Original_PipelineQuantity)) AND ((@IsNull_PipeLineDate = 1 AND [PipeLineDate] IS NULL) OR ([PipeLineDate] = @Original_PipeLineDate)) AND ((@IsNull_DollarPrice = 1 AND [DollarPrice] IS NULL) OR ([DollarPrice] = @Original_DollarPrice)) AND ((@IsNull_AccItemName = 1 AND [AccItemName] IS NULL) OR ([AccItemName] = @Original_AccItemName)) AND ((@IsNull_AccBuyerId = 1 AND [AccBuyerId] IS NULL) OR ([AccBuyerId] = @Original_AccBuyerId)) AND ((@IsNull_AccItemStyleId = 1 AND [AccItemStyleId] IS NULL) OR ([AccItemStyleId] = @Original_AccItemStyleId)) AND ((@IsNull_AccItemStyle = 1 AND [AccItemStyle] IS NULL) OR ([AccItemStyle] = @Original_AccItemStyle)) AND ((@IsNull_YarnTypeId = 1 AND [YarnTypeId] IS NULL) OR ([YarnTypeId] = @Original_YarnTypeId)) AND ((@IsNull_YarnCount = 1 AND [YarnCount] IS NULL) OR ([YarnCount] = @Original_YarnCount)) AND ((@IsNull_YarnQuality = 1 AND [YarnQuality] IS NULL) OR ([YarnQuality] = @Original_YarnQuality)) AND ((@IsNull_YarnLotNo = 1 AND [YarnLotNo] IS NULL) OR ([YarnLotNo] = @Original_YarnLotNo)) AND ((@IsNull_IsCertify = 1 AND [IsCertify] IS NULL) OR ([IsCertify] = @Original_IsCertify)) AND ((@IsNull_AccessoriesId = 1 AND [AccessoriesId] IS NULL) OR ([AccessoriesId] = @Original_AccessoriesId)) AND ((@IsNull_PreItemId = 1 AND [PreItemId] IS NULL) OR ([PreItemId] = @Original_PreItemId)) AND ((@IsNull_AvgPrice = 1 AND [AvgPrice] IS NULL) OR ([AvgPrice] = @Original_AvgPrice)) AND ((@IsNull_PackType = 1 AND [PackType] IS NULL) OR ([PackType] = @Original_PackType)) AND ((@IsNull_CurrencyId = 1 AND [CurrencyId] IS NULL) OR ([CurrencyId] = @Original_CurrencyId)) AND ((@IsNull_YDOrderDetailsId = 1 AND [YDOrderDetailsId] IS NULL) OR ([YDOrderDetailsId] = @Original_YDOrderDetailsId)));
+SELECT ItemId, ItemName, ItemDescription, OriginId, BrandId, CategoryId, SubCategoryId, UnitId, QuantityPerPacket, PreviousPrice, CurrentPrice, DepartmentId, ReorderLabel, ExpireLabel, UserLabel, Discontinue, UserId, ModifiedOn, PipelineQuantity, PipeLineDate, DollarPrice, AccItemName, AccBuyerId, AccItemStyleId, AccItemStyle, YarnTypeId, YarnCount, YarnQuality, YarnLotNo, IsCertify, AccessoriesId, PreItemId, AvgPrice, PackType, CurrencyId, YDOrderDetailsId FROM ItemList WHERE (ItemId = @ItemId) ORDER BY ItemName, ItemId</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ItemDescription" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@OriginId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="OriginId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@BrandId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="BrandId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@CategoryId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="CategoryId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@SubCategoryId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="SubCategoryId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@UnitId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="UnitId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@QuantityPerPacket" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="QuantityPerPacket" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@PreviousPrice" Precision="18" ProviderType="Decimal" Scale="5" Size="0" SourceColumn="PreviousPrice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@CurrentPrice" Precision="18" ProviderType="Decimal" Scale="5" Size="0" SourceColumn="CurrentPrice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@DepartmentId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="DepartmentId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@ReorderLabel" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="ReorderLabel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@ExpireLabel" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="ExpireLabel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@UserLabel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UserLabel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Discontinue" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Discontinue" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@ModifiedOn" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="ModifiedOn" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@PipelineQuantity" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="PipelineQuantity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@PipeLineDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="PipeLineDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@DollarPrice" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="DollarPrice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@AccItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AccItemName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@AccBuyerId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccBuyerId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@AccItemStyleId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccItemStyleId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@AccItemStyle" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AccItemStyle" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@YarnTypeId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="YarnTypeId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@YarnCount" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="YarnCount" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@YarnQuality" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="YarnQuality" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@YarnLotNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="YarnLotNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@IsCertify" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsCertify" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@AccessoriesId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@PreItemId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="PreItemId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@AvgPrice" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="AvgPrice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@PackType" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PackType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@CurrencyId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CurrencyId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@YDOrderDetailsId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="YDOrderDetailsId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_ItemId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="ItemId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ItemDescription" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ItemDescription" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ItemDescription" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemDescription" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_OriginId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="OriginId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_OriginId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="OriginId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_BrandId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="BrandId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_BrandId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="BrandId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CategoryId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CategoryId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_CategoryId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="CategoryId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SubCategoryId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SubCategoryId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_SubCategoryId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="SubCategoryId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UnitId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UnitId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_UnitId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="UnitId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_QuantityPerPacket" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="QuantityPerPacket" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_QuantityPerPacket" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="QuantityPerPacket" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_PreviousPrice" Precision="18" ProviderType="Decimal" Scale="5" Size="0" SourceColumn="PreviousPrice" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_CurrentPrice" Precision="18" ProviderType="Decimal" Scale="5" Size="0" SourceColumn="CurrentPrice" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_DepartmentId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="DepartmentId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ReorderLabel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ReorderLabel" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_ReorderLabel" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="ReorderLabel" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ExpireLabel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ExpireLabel" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_ExpireLabel" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="ExpireLabel" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UserLabel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UserLabel" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_UserLabel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UserLabel" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Discontinue" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Discontinue" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_Discontinue" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Discontinue" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UserId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UserId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_UserId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ModifiedOn" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ModifiedOn" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_ModifiedOn" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="ModifiedOn" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PipelineQuantity" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PipelineQuantity" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_PipelineQuantity" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="PipelineQuantity" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PipeLineDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PipeLineDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_PipeLineDate" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="PipeLineDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DollarPrice" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DollarPrice" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_DollarPrice" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="DollarPrice" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccItemName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccItemName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_AccItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AccItemName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccBuyerId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccBuyerId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_AccBuyerId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccBuyerId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccItemStyleId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccItemStyleId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_AccItemStyleId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccItemStyleId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccItemStyle" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccItemStyle" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_AccItemStyle" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AccItemStyle" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YarnTypeId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YarnTypeId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_YarnTypeId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="YarnTypeId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YarnCount" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YarnCount" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_YarnCount" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="YarnCount" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YarnQuality" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YarnQuality" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_YarnQuality" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="YarnQuality" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YarnLotNo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YarnLotNo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_YarnLotNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="YarnLotNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IsCertify" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IsCertify" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_IsCertify" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="IsCertify" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccessoriesId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccessoriesId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_AccessoriesId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccessoriesId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PreItemId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PreItemId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_PreItemId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="PreItemId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AvgPrice" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AvgPrice" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_AvgPrice" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="AvgPrice" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PackType" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PackType" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_PackType" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PackType" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CurrencyId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CurrencyId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CurrencyId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CurrencyId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YDOrderDetailsId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YDOrderDetailsId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_YDOrderDetailsId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="YDOrderDetailsId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ItemId" ColumnName="ItemId" DataSourceName="[ncl-db].dbo.ItemList" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@ItemId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="ItemId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ItemId" DataSetColumn="ItemId" />
+              <Mapping SourceColumn="ItemName" DataSetColumn="ItemName" />
+              <Mapping SourceColumn="ItemDescription" DataSetColumn="ItemDescription" />
+              <Mapping SourceColumn="OriginId" DataSetColumn="OriginId" />
+              <Mapping SourceColumn="BrandId" DataSetColumn="BrandId" />
+              <Mapping SourceColumn="CategoryId" DataSetColumn="CategoryId" />
+              <Mapping SourceColumn="SubCategoryId" DataSetColumn="SubCategoryId" />
+              <Mapping SourceColumn="UnitId" DataSetColumn="UnitId" />
+              <Mapping SourceColumn="QuantityPerPacket" DataSetColumn="QuantityPerPacket" />
+              <Mapping SourceColumn="PreviousPrice" DataSetColumn="PreviousPrice" />
+              <Mapping SourceColumn="CurrentPrice" DataSetColumn="CurrentPrice" />
+              <Mapping SourceColumn="DepartmentId" DataSetColumn="DepartmentId" />
+              <Mapping SourceColumn="ReorderLabel" DataSetColumn="ReorderLabel" />
+              <Mapping SourceColumn="ExpireLabel" DataSetColumn="ExpireLabel" />
+              <Mapping SourceColumn="UserLabel" DataSetColumn="UserLabel" />
+              <Mapping SourceColumn="Discontinue" DataSetColumn="Discontinue" />
+              <Mapping SourceColumn="UserId" DataSetColumn="UserId" />
+              <Mapping SourceColumn="ModifiedOn" DataSetColumn="ModifiedOn" />
+              <Mapping SourceColumn="PipelineQuantity" DataSetColumn="PipelineQuantity" />
+              <Mapping SourceColumn="PipeLineDate" DataSetColumn="PipeLineDate" />
+              <Mapping SourceColumn="DollarPrice" DataSetColumn="DollarPrice" />
+              <Mapping SourceColumn="AccItemName" DataSetColumn="AccItemName" />
+              <Mapping SourceColumn="AccBuyerId" DataSetColumn="AccBuyerId" />
+              <Mapping SourceColumn="AccItemStyleId" DataSetColumn="AccItemStyleId" />
+              <Mapping SourceColumn="AccItemStyle" DataSetColumn="AccItemStyle" />
+              <Mapping SourceColumn="YarnTypeId" DataSetColumn="YarnTypeId" />
+              <Mapping SourceColumn="YarnCount" DataSetColumn="YarnCount" />
+              <Mapping SourceColumn="YarnQuality" DataSetColumn="YarnQuality" />
+              <Mapping SourceColumn="YarnLotNo" DataSetColumn="YarnLotNo" />
+              <Mapping SourceColumn="IsCertify" DataSetColumn="IsCertify" />
+              <Mapping SourceColumn="AccessoriesId" DataSetColumn="AccessoriesId" />
+              <Mapping SourceColumn="PreItemId" DataSetColumn="PreItemId" />
+              <Mapping SourceColumn="AvgPrice" DataSetColumn="AvgPrice" />
+              <Mapping SourceColumn="PackType" DataSetColumn="PackType" />
+              <Mapping SourceColumn="CurrencyId" DataSetColumn="CurrencyId" />
+              <Mapping SourceColumn="YDOrderDetailsId" DataSetColumn="YDOrderDetailsId" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_InventoryConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.ItemList" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByDepartmentAndDiscontinue" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByDepartmentAndDiscontinue" GeneratorSourceName="FillByDepartmentAndDiscontinue" GetMethodModifier="Public" GetMethodName="GetDataByDepartmentAndDiscontinue" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByDepartmentAndDiscontinue" UserSourceName="FillByDepartmentAndDiscontinue">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT AccBuyerId, AccItemName, AccItemStyle, AccItemStyleId, AccessoriesId, AvgPrice, BrandId, CategoryId, CurrencyId, CurrentPrice, DepartmentId, Discontinue, DollarPrice, ExpireLabel, IsCertify, ItemDescription, ItemId, ItemName, ModifiedOn, OriginId, PackType, PipeLineDate, PipelineQuantity, PreItemId, PreviousPrice, QuantityPerPacket, ReorderLabel, SubCategoryId, UnitId, UserId, UserLabel, YDOrderDetailsId, YarnCount, YarnLotNo, YarnQuality, YarnTypeId FROM ItemList WHERE (DepartmentId = @DepartmentId) AND (Discontinue = @Discontinue) ORDER BY ItemName, ItemId</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="DepartmentId" ColumnName="DepartmentId" DataSourceName="[ncl-db].dbo.ItemList" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@DepartmentId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="DepartmentId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Discontinue" ColumnName="Discontinue" DataSourceName="[ncl-db].dbo.ItemList" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@Discontinue" Precision="0" ProviderType="Bit" Scale="0" Size="1" SourceColumn="Discontinue" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_InventoryConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.ItemList" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByDepartmentId" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillByDepartmentId" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillByDepartmentId">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT AccBuyerId, AccItemName, AccItemStyle, AccItemStyleId, AccessoriesId, AvgPrice, BrandId, CategoryId, CurrencyId, CurrentPrice, DepartmentId, Discontinue, DollarPrice, ExpireLabel, IsCertify, ItemDescription, ItemId, ItemName, ModifiedOn, OriginId, PackType, PipeLineDate, PipelineQuantity, PreItemId, PreviousPrice, QuantityPerPacket, ReorderLabel, SubCategoryId, UnitId, UserId, UserLabel, YDOrderDetailsId, YarnCount, YarnLotNo, YarnQuality, YarnTypeId FROM ItemList WHERE (DepartmentId = @DepartmentId) ORDER BY ItemName, ItemId</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="DepartmentId" ColumnName="DepartmentId" DataSourceName="[ncl-db].dbo.ItemList" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@DepartmentId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="DepartmentId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_InventoryConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.ItemList" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByItemName" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillByItemName" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByItemName">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT AccBuyerId, AccItemName, AccItemStyle, AccItemStyleId, AccessoriesId, AvgPrice, BrandId, CategoryId, CurrencyId, CurrentPrice, DepartmentId, Discontinue, DollarPrice, ExpireLabel, IsCertify, ItemDescription, ItemId, ItemName, ModifiedOn, OriginId, PackType, PipeLineDate, PipelineQuantity, PreItemId, PreviousPrice, QuantityPerPacket, ReorderLabel, SubCategoryId, UnitId, UserId, UserLabel, YDOrderDetailsId, YarnCount, YarnLotNo, YarnQuality, YarnTypeId FROM ItemList WHERE (ItemName LIKE '%' + @ItemName + '%') AND (DepartmentId = @DepartmentId) ORDER BY ItemName</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="ItemName" ColumnName="ItemName" DataSourceName="[ncl-db].dbo.ItemList" DataTypeServer="varchar(100)" DbType="AnsiString" Direction="Input" ParameterName="@ItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumn="ItemName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="DepartmentId" ColumnName="DepartmentId" DataSourceName="[ncl-db].dbo.ItemList" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@DepartmentId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="DepartmentId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_InventoryConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.ItemList" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByUserLabel" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByUserLabel" GeneratorSourceName="FillByUserLabel" GetMethodModifier="Public" GetMethodName="GetDataByUserLabel" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByUserLabel" UserSourceName="FillByUserLabel">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT AccBuyerId, AccItemName, AccItemStyle, AccItemStyleId, AccessoriesId, AvgPrice, BrandId, CategoryId, CurrencyId, CurrentPrice, DepartmentId, Discontinue, DollarPrice, ExpireLabel, IsCertify, ItemDescription, ItemId, ItemName, ModifiedOn, OriginId, PackType, PipeLineDate, PipelineQuantity, PreItemId, PreviousPrice, QuantityPerPacket, ReorderLabel, SubCategoryId, UnitId, UserId, UserLabel, YDOrderDetailsId, YarnCount, YarnLotNo, YarnQuality, YarnTypeId FROM ItemList WHERE (UserLabel = @UserLabel) ORDER BY ItemName, ItemId</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="UserLabel" ColumnName="UserLabel" DataSourceName="[ncl-db].dbo.ItemList" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@UserLabel" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="UserLabel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_InventoryConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.ItemList" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByYDOrderId" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByYDOrderId" GeneratorSourceName="FillByYDOrderId" GetMethodModifier="Public" GetMethodName="GetDataByYDOrderId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByYDOrderId" UserSourceName="FillByYDOrderId">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ItemId, ItemName, ItemDescription, OriginId, BrandId, CategoryId, SubCategoryId, UnitId, QuantityPerPacket, PreviousPrice, CurrentPrice, DepartmentId, ReorderLabel, ExpireLabel, UserLabel, Discontinue, UserId, ModifiedOn, 
+                         PipelineQuantity, PipeLineDate, DollarPrice, AccItemName, AccBuyerId, AccItemStyleId, AccItemStyle, YarnTypeId, YarnCount, YarnQuality, YarnLotNo, IsCertify, AccessoriesId, PreItemId, AvgPrice, PackType, CurrencyId, 
+                         YDOrderDetailsId
+FROM            ItemList
+WHERE        (YDOrderDetailsId IN
+                             (SELECT        YDOrderDetailsId
+                               FROM            YDOrderDetails
+                               WHERE        (YDOrderId = @YDOrderId))) AND (DepartmentId = @DepartmentId)
+ORDER BY ItemName, ItemId</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="DepartmentId" ColumnName="DepartmentId" DataSourceName="[ncl-db].dbo.ItemList" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@DepartmentId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="DepartmentId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="YDOrderId" ColumnName="" DataSourceName="" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@YDOrderId" Precision="0" Scale="0" Size="8" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ItemListLookupTableAdapter" GeneratorDataComponentClassName="ItemListLookupTableAdapter" Name="ItemListLookup" UserDataComponentName="ItemListLookupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_InventoryConnectionString (MySettings)" DbObjectName="[srl-data].dbo.ItemList" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [ItemList] WHERE (([ItemId] = @Original_ItemId) AND ([ItemName] = @Original_ItemName) AND ([DepartmentId] = @Original_DepartmentId) AND ((@IsNull_AccItemName = 1 AND [AccItemName] IS NULL) OR ([AccItemName] = @Original_AccItemName)) AND ((@IsNull_AccItemStyle = 1 AND [AccItemStyle] IS NULL) OR ([AccItemStyle] = @Original_AccItemStyle)) AND ((@IsNull_AccBuyerId = 1 AND [AccBuyerId] IS NULL) OR ([AccBuyerId] = @Original_AccBuyerId)) AND ([CurrentPrice] = @Original_CurrentPrice) AND ((@IsNull_UnitId = 1 AND [UnitId] IS NULL) OR ([UnitId] = @Original_UnitId)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_ItemId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="ItemId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_DepartmentId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="DepartmentId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccItemName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccItemName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_AccItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AccItemName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccItemStyle" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccItemStyle" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_AccItemStyle" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AccItemStyle" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccBuyerId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccBuyerId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_AccBuyerId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccBuyerId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_CurrentPrice" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="CurrentPrice" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UnitId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UnitId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_UnitId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="UnitId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [ItemList] ([ItemName], [DepartmentId], [AccItemName], [AccItemStyle], [AccBuyerId], [CurrentPrice], [UnitId]) VALUES (@ItemName, @DepartmentId, @AccItemName, @AccItemStyle, @AccBuyerId, @CurrentPrice, @UnitId);
+SELECT ItemId, ItemName, DepartmentId, AccItemName, AccItemStyle, AccBuyerId, CurrentPrice, UnitId FROM ItemList WHERE (ItemId = SCOPE_IDENTITY()) ORDER BY ItemName</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@DepartmentId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="DepartmentId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@AccItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AccItemName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@AccItemStyle" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AccItemStyle" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@AccBuyerId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccBuyerId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@CurrentPrice" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="CurrentPrice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@UnitId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="UnitId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ItemId, ItemName, DepartmentId, AccItemName, AccItemStyle, AccBuyerId, CurrentPrice, UnitId
+FROM            ItemList
+WHERE        (DepartmentId = @DepartmentId)
+ORDER BY ItemName</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="DepartmentId" ColumnName="DepartmentId" DataSourceName="[srl-data].dbo.ItemList" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@DepartmentId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="DepartmentId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [ItemList] SET [ItemName] = @ItemName, [DepartmentId] = @DepartmentId, [AccItemName] = @AccItemName, [AccItemStyle] = @AccItemStyle, [AccBuyerId] = @AccBuyerId, [CurrentPrice] = @CurrentPrice, [UnitId] = @UnitId WHERE (([ItemId] = @Original_ItemId) AND ([ItemName] = @Original_ItemName) AND ([DepartmentId] = @Original_DepartmentId) AND ((@IsNull_AccItemName = 1 AND [AccItemName] IS NULL) OR ([AccItemName] = @Original_AccItemName)) AND ((@IsNull_AccItemStyle = 1 AND [AccItemStyle] IS NULL) OR ([AccItemStyle] = @Original_AccItemStyle)) AND ((@IsNull_AccBuyerId = 1 AND [AccBuyerId] IS NULL) OR ([AccBuyerId] = @Original_AccBuyerId)) AND ([CurrentPrice] = @Original_CurrentPrice) AND ((@IsNull_UnitId = 1 AND [UnitId] IS NULL) OR ([UnitId] = @Original_UnitId)));
+SELECT ItemId, ItemName, DepartmentId, AccItemName, AccItemStyle, AccBuyerId, CurrentPrice, UnitId FROM ItemList WHERE (ItemId = @ItemId) ORDER BY ItemName</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@DepartmentId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="DepartmentId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@AccItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AccItemName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@AccItemStyle" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AccItemStyle" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@AccBuyerId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccBuyerId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@CurrentPrice" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="CurrentPrice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@UnitId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="UnitId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_ItemId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="ItemId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ItemName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_DepartmentId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="DepartmentId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccItemName" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccItemName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_AccItemName" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AccItemName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccItemStyle" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccItemStyle" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_AccItemStyle" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="AccItemStyle" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_AccBuyerId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AccBuyerId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_AccBuyerId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="AccBuyerId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_CurrentPrice" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="CurrentPrice" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_UnitId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="UnitId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_UnitId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="UnitId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ItemId" ColumnName="ItemId" DataSourceName="[srl-data].dbo.ItemList" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@ItemId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="ItemId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ItemId" DataSetColumn="ItemId" />
+              <Mapping SourceColumn="ItemName" DataSetColumn="ItemName" />
+              <Mapping SourceColumn="DepartmentId" DataSetColumn="DepartmentId" />
+              <Mapping SourceColumn="AccItemName" DataSetColumn="AccItemName" />
+              <Mapping SourceColumn="AccItemStyle" DataSetColumn="AccItemStyle" />
+              <Mapping SourceColumn="AccBuyerId" DataSetColumn="AccBuyerId" />
+              <Mapping SourceColumn="CurrentPrice" DataSetColumn="CurrentPrice" />
+              <Mapping SourceColumn="UnitId" DataSetColumn="UnitId" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_InventoryConnectionString (MySettings)" DbObjectName="[srl-data].dbo.ItemList" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByAccName" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByAccName" GeneratorSourceName="FillByAccName" GetMethodModifier="Public" GetMethodName="GetDataByAccName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByAccName" UserSourceName="FillByAccName">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT AccBuyerId, AccItemName, AccItemStyle, CurrentPrice, DepartmentId, ItemId, ItemName, UnitId FROM ItemList WHERE (DepartmentId = @DepartmentId) AND (AccItemName LIKE '%' + @AccName + '%') ORDER BY ItemName</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="DepartmentId" ColumnName="DepartmentId" DataSourceName="[srl-data].dbo.ItemList" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@DepartmentId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="DepartmentId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="AccName" ColumnName="AccItemName" DataSourceName="[srl-data].dbo.ItemList" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@AccName" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="AccItemName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_InventoryConnectionString (MySettings)" DbObjectName="[srl-data].dbo.ItemList" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByAccNameAndStyle" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByAccNameAndStyle" GeneratorSourceName="FillByAccNameAndStyle" GetMethodModifier="Public" GetMethodName="GetDataByAccNameAndStyle" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByAccNameAndStyle" UserSourceName="FillByAccNameAndStyle">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT AccBuyerId, AccItemName, AccItemStyle, CurrentPrice, DepartmentId, ItemId, ItemName, UnitId FROM ItemList WHERE (DepartmentId = @DepartmentId) AND (AccItemName = @AccName) AND (AccItemStyle LIKE '%' + @AccStyle + '%') ORDER BY ItemName</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="DepartmentId" ColumnName="DepartmentId" DataSourceName="[srl-data].dbo.ItemList" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@DepartmentId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="DepartmentId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="AccName" ColumnName="AccItemName" DataSourceName="[srl-data].dbo.ItemList" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@AccName" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="AccItemName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="AccStyle" ColumnName="AccItemStyle" DataSourceName="[srl-data].dbo.ItemList" DataTypeServer="varchar(100)" DbType="AnsiString" Direction="Input" ParameterName="@AccStyle" Precision="0" ProviderType="VarChar" Scale="0" Size="100" SourceColumn="AccItemStyle" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ItemListDepartmentTableAdapter" GeneratorDataComponentClassName="ItemListDepartmentTableAdapter" Name="ItemListDepartment" UserDataComponentName="ItemListDepartmentTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_InventoryConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     ItemList.ItemId, ItemList.ItemName, ItemList.DepartmentId, Department.DepartmentName, ItemList.UserLabel
+FROM         ItemList LEFT OUTER JOIN
+                      Department ON ItemList.DepartmentId = Department.DepartmentId
+WHERE     (ItemList.DepartmentId = @DepartmentId)
+Order By ItemName</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="DepartmentId" ColumnName="DepartmentId" DataSourceName="[echo-printing].dbo.ItemList" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@DepartmentId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="DepartmentId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ItemId" DataSetColumn="ItemId" />
+              <Mapping SourceColumn="ItemName" DataSetColumn="ItemName" />
+              <Mapping SourceColumn="DepartmentId" DataSetColumn="DepartmentId" />
+              <Mapping SourceColumn="DepartmentName" DataSetColumn="DepartmentName" />
+              <Mapping SourceColumn="UserLabel" DataSetColumn="UserLabel" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_InventoryConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByUserLabel" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByUserLabel" GeneratorSourceName="FillByUserLabel" GetMethodModifier="Public" GetMethodName="GetDataByUserLabel" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByUserLabel" UserSourceName="FillByUserLabel">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     ItemList.ItemId, ItemList.ItemName, ItemList.DepartmentId, Department.DepartmentName, ItemList.UserLabel
+FROM         ItemList LEFT OUTER JOIN
+                      Department ON ItemList.DepartmentId = Department.DepartmentId
+WHERE     (ItemList.UserLabel = @UserLabel)
+Order By ItemName</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="UserLabel" ColumnName="UserLabel" DataSourceName="[echo-printing].dbo.ItemList" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@UserLabel" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="UserLabel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ItemLeadTimeTableAdapter" GeneratorDataComponentClassName="ItemLeadTimeTableAdapter" Name="ItemLeadTime" UserDataComponentName="ItemLeadTimeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_InventoryConnectionString (MySettings)" DbObjectName="[ncl-db].dbo.ItemLeadTime" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [ItemLeadTime] WHERE (([LeadTimeId] = @Original_LeadTimeId) AND ((@IsNull_ItemId = 1 AND [ItemId] IS NULL) OR ([ItemId] = @Original_ItemId)) AND ((@IsNull_SupplierId = 1 AND [SupplierId] IS NULL) OR ([SupplierId] = @Original_SupplierId)) AND ((@IsNull_LeadDay = 1 AND [LeadDay] IS NULL) OR ([LeadDay] = @Original_LeadDay)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_LeadTimeId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LeadTimeId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ItemId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ItemId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_ItemId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="ItemId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SupplierId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SupplierId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_SupplierId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="SupplierId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_LeadDay" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LeadDay" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_LeadDay" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LeadDay" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [ItemLeadTime] ([ItemId], [SupplierId], [LeadDay]) VALUES (@ItemId, @SupplierId, @LeadDay);
+SELECT LeadTimeId, ItemId, SupplierId, LeadDay FROM ItemLeadTime WHERE (LeadTimeId = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@ItemId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="ItemId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@SupplierId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="SupplierId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@LeadDay" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LeadDay" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        LeadTimeId, ItemId, SupplierId, LeadDay
+FROM            ItemLeadTime</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [ItemLeadTime] SET [ItemId] = @ItemId, [SupplierId] = @SupplierId, [LeadDay] = @LeadDay WHERE (([LeadTimeId] = @Original_LeadTimeId) AND ((@IsNull_ItemId = 1 AND [ItemId] IS NULL) OR ([ItemId] = @Original_ItemId)) AND ((@IsNull_SupplierId = 1 AND [SupplierId] IS NULL) OR ([SupplierId] = @Original_SupplierId)) AND ((@IsNull_LeadDay = 1 AND [LeadDay] IS NULL) OR ([LeadDay] = @Original_LeadDay)));
+SELECT LeadTimeId, ItemId, SupplierId, LeadDay FROM ItemLeadTime WHERE (LeadTimeId = @LeadTimeId)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@ItemId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="ItemId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@SupplierId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="SupplierId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@LeadDay" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LeadDay" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_LeadTimeId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LeadTimeId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ItemId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ItemId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_ItemId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="ItemId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SupplierId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SupplierId" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int64" Direction="Input" ParameterName="@Original_SupplierId" Precision="0" ProviderType="BigInt" Scale="0" Size="0" SourceColumn="SupplierId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_LeadDay" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LeadDay" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_LeadDay" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LeadDay" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="LeadTimeId" ColumnName="LeadTimeId" DataSourceName="[ncl-db].dbo.ItemLeadTime" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@LeadTimeId" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="LeadTimeId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="LeadTimeId" DataSetColumn="LeadTimeId" />
+              <Mapping SourceColumn="ItemId" DataSetColumn="ItemId" />
+              <Mapping SourceColumn="SupplierId" DataSetColumn="SupplierId" />
+              <Mapping SourceColumn="LeadDay" DataSetColumn="LeadDay" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ItemListDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:EnforceConstraints="False" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ItemListDataSet" msprop:Generator_UserDSName="ItemListDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ItemList" msprop:Generator_UserTableName="ItemList" msprop:Generator_RowEvArgName="ItemListRowChangeEvent" msprop:Generator_TableVarName="tableItemList" msprop:Generator_TablePropName="ItemList" msprop:Generator_RowDeletingName="ItemListRowDeleting" msprop:Generator_RowChangingName="ItemListRowChanging" msprop:Generator_RowDeletedName="ItemListRowDeleted" msprop:Generator_RowEvHandlerName="ItemListRowChangeEventHandler" msprop:Generator_TableClassName="ItemListDataTable" msprop:Generator_RowChangedName="ItemListRowChanged" msprop:Generator_RowClassName="ItemListRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ItemId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnItemId" msprop:Generator_ColumnPropNameInRow="ItemId" msprop:Generator_ColumnPropNameInTable="ItemIdColumn" msprop:Generator_UserColumnName="ItemId" type="xs:long" />
+              <xs:element name="ItemName" msprop:Generator_ColumnVarNameInTable="columnItemName" msprop:Generator_ColumnPropNameInRow="ItemName" msprop:Generator_ColumnPropNameInTable="ItemNameColumn" msprop:Generator_UserColumnName="ItemName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ItemDescription" msprop:Generator_ColumnVarNameInTable="columnItemDescription" msprop:Generator_ColumnPropNameInRow="ItemDescription" msprop:Generator_ColumnPropNameInTable="ItemDescriptionColumn" msprop:Generator_UserColumnName="ItemDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OriginId" msprop:Generator_ColumnVarNameInTable="columnOriginId" msprop:Generator_ColumnPropNameInRow="OriginId" msprop:Generator_ColumnPropNameInTable="OriginIdColumn" msprop:Generator_UserColumnName="OriginId" type="xs:long" minOccurs="0" />
+              <xs:element name="BrandId" msprop:Generator_ColumnVarNameInTable="columnBrandId" msprop:Generator_ColumnPropNameInRow="BrandId" msprop:Generator_ColumnPropNameInTable="BrandIdColumn" msprop:Generator_UserColumnName="BrandId" type="xs:long" minOccurs="0" />
+              <xs:element name="CategoryId" msprop:Generator_ColumnVarNameInTable="columnCategoryId" msprop:Generator_ColumnPropNameInRow="CategoryId" msprop:Generator_ColumnPropNameInTable="CategoryIdColumn" msprop:Generator_UserColumnName="CategoryId" type="xs:long" minOccurs="0" />
+              <xs:element name="SubCategoryId" msprop:Generator_ColumnVarNameInTable="columnSubCategoryId" msprop:Generator_ColumnPropNameInRow="SubCategoryId" msprop:Generator_ColumnPropNameInTable="SubCategoryIdColumn" msprop:Generator_UserColumnName="SubCategoryId" type="xs:long" minOccurs="0" />
+              <xs:element name="UnitId" msprop:Generator_ColumnVarNameInTable="columnUnitId" msprop:Generator_ColumnPropNameInRow="UnitId" msprop:Generator_ColumnPropNameInTable="UnitIdColumn" msprop:Generator_UserColumnName="UnitId" type="xs:long" minOccurs="0" />
+              <xs:element name="QuantityPerPacket" msprop:Generator_ColumnVarNameInTable="columnQuantityPerPacket" msprop:Generator_ColumnPropNameInRow="QuantityPerPacket" msprop:Generator_ColumnPropNameInTable="QuantityPerPacketColumn" msprop:Generator_UserColumnName="QuantityPerPacket" type="xs:long" minOccurs="0" />
+              <xs:element name="PreviousPrice" msprop:Generator_ColumnVarNameInTable="columnPreviousPrice" msprop:Generator_ColumnPropNameInRow="PreviousPrice" msprop:Generator_ColumnPropNameInTable="PreviousPriceColumn" msprop:Generator_UserColumnName="PreviousPrice" type="xs:decimal" default="0" />
+              <xs:element name="CurrentPrice" msprop:Generator_ColumnVarNameInTable="columnCurrentPrice" msprop:Generator_ColumnPropNameInRow="CurrentPrice" msprop:Generator_ColumnPropNameInTable="CurrentPriceColumn" msprop:Generator_UserColumnName="CurrentPrice" type="xs:decimal" default="0" />
+              <xs:element name="DepartmentId" msprop:Generator_ColumnVarNameInTable="columnDepartmentId" msprop:Generator_ColumnPropNameInRow="DepartmentId" msprop:Generator_ColumnPropNameInTable="DepartmentIdColumn" msprop:Generator_UserColumnName="DepartmentId" type="xs:long" />
+              <xs:element name="ReorderLabel" msprop:Generator_ColumnVarNameInTable="columnReorderLabel" msprop:Generator_ColumnPropNameInRow="ReorderLabel" msprop:Generator_ColumnPropNameInTable="ReorderLabelColumn" msprop:Generator_UserColumnName="ReorderLabel" type="xs:long" minOccurs="0" />
+              <xs:element name="ExpireLabel" msprop:Generator_ColumnVarNameInTable="columnExpireLabel" msprop:Generator_ColumnPropNameInRow="ExpireLabel" msprop:Generator_ColumnPropNameInTable="ExpireLabelColumn" msprop:Generator_UserColumnName="ExpireLabel" type="xs:long" minOccurs="0" />
+              <xs:element name="UserLabel" msprop:Generator_ColumnVarNameInTable="columnUserLabel" msprop:Generator_ColumnPropNameInRow="UserLabel" msprop:Generator_ColumnPropNameInTable="UserLabelColumn" msprop:Generator_UserColumnName="UserLabel" type="xs:int" minOccurs="0" />
+              <xs:element name="Discontinue" msprop:Generator_ColumnVarNameInTable="columnDiscontinue" msprop:Generator_ColumnPropNameInRow="Discontinue" msprop:Generator_ColumnPropNameInTable="DiscontinueColumn" msprop:Generator_UserColumnName="Discontinue" type="xs:boolean" default="false" minOccurs="0" />
+              <xs:element name="UserId" msprop:Generator_ColumnVarNameInTable="columnUserId" msprop:Generator_ColumnPropNameInRow="UserId" msprop:Generator_ColumnPropNameInTable="UserIdColumn" msprop:Generator_UserColumnName="UserId" type="xs:long" minOccurs="0" />
+              <xs:element name="ModifiedOn" msprop:Generator_ColumnVarNameInTable="columnModifiedOn" msprop:Generator_ColumnPropNameInRow="ModifiedOn" msprop:Generator_ColumnPropNameInTable="ModifiedOnColumn" msprop:Generator_UserColumnName="ModifiedOn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PipelineQuantity" msprop:Generator_ColumnVarNameInTable="columnPipelineQuantity" msprop:Generator_ColumnPropNameInRow="PipelineQuantity" msprop:Generator_ColumnPropNameInTable="PipelineQuantityColumn" msprop:Generator_UserColumnName="PipelineQuantity" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="PipeLineDate" msprop:Generator_ColumnVarNameInTable="columnPipeLineDate" msprop:Generator_ColumnPropNameInRow="PipeLineDate" msprop:Generator_ColumnPropNameInTable="PipeLineDateColumn" msprop:Generator_UserColumnName="PipeLineDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DollarPrice" msprop:Generator_ColumnVarNameInTable="columnDollarPrice" msprop:Generator_ColumnPropNameInRow="DollarPrice" msprop:Generator_ColumnPropNameInTable="DollarPriceColumn" msprop:Generator_UserColumnName="DollarPrice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AccItemName" msprop:Generator_ColumnVarNameInTable="columnAccItemName" msprop:Generator_ColumnPropNameInRow="AccItemName" msprop:Generator_ColumnPropNameInTable="AccItemNameColumn" msprop:Generator_UserColumnName="AccItemName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AccBuyerId" msprop:Generator_ColumnVarNameInTable="columnAccBuyerId" msprop:Generator_ColumnPropNameInRow="AccBuyerId" msprop:Generator_ColumnPropNameInTable="AccBuyerIdColumn" msprop:Generator_UserColumnName="AccBuyerId" type="xs:long" minOccurs="0" />
+              <xs:element name="AccItemStyleId" msprop:Generator_ColumnVarNameInTable="columnAccItemStyleId" msprop:Generator_ColumnPropNameInRow="AccItemStyleId" msprop:Generator_ColumnPropNameInTable="AccItemStyleIdColumn" msprop:Generator_UserColumnName="AccItemStyleId" type="xs:long" minOccurs="0" />
+              <xs:element name="AccItemStyle" msprop:Generator_ColumnVarNameInTable="columnAccItemStyle" msprop:Generator_ColumnPropNameInRow="AccItemStyle" msprop:Generator_ColumnPropNameInTable="AccItemStyleColumn" msprop:Generator_UserColumnName="AccItemStyle" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YarnTypeId" msprop:Generator_ColumnVarNameInTable="columnYarnTypeId" msprop:Generator_ColumnPropNameInRow="YarnTypeId" msprop:Generator_ColumnPropNameInTable="YarnTypeIdColumn" msprop:Generator_UserColumnName="YarnTypeId" type="xs:long" minOccurs="0" />
+              <xs:element name="YarnCount" msprop:Generator_ColumnVarNameInTable="columnYarnCount" msprop:Generator_ColumnPropNameInRow="YarnCount" msprop:Generator_ColumnPropNameInTable="YarnCountColumn" msprop:Generator_UserColumnName="YarnCount" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YarnQuality" msprop:Generator_ColumnVarNameInTable="columnYarnQuality" msprop:Generator_ColumnPropNameInRow="YarnQuality" msprop:Generator_ColumnPropNameInTable="YarnQualityColumn" msprop:Generator_UserColumnName="YarnQuality" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YarnLotNo" msprop:Generator_ColumnVarNameInTable="columnYarnLotNo" msprop:Generator_ColumnPropNameInRow="YarnLotNo" msprop:Generator_ColumnPropNameInTable="YarnLotNoColumn" msprop:Generator_UserColumnName="YarnLotNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsCertify" msprop:Generator_ColumnVarNameInTable="columnIsCertify" msprop:Generator_ColumnPropNameInRow="IsCertify" msprop:Generator_ColumnPropNameInTable="IsCertifyColumn" msprop:Generator_UserColumnName="IsCertify" type="xs:boolean" minOccurs="0" />
+              <xs:element name="AccessoriesId" msprop:Generator_ColumnVarNameInTable="columnAccessoriesId" msprop:Generator_ColumnPropNameInRow="AccessoriesId" msprop:Generator_ColumnPropNameInTable="AccessoriesIdColumn" msprop:Generator_UserColumnName="AccessoriesId" type="xs:long" minOccurs="0" />
+              <xs:element name="PreItemId" msprop:Generator_ColumnVarNameInTable="columnPreItemId" msprop:Generator_ColumnPropNameInRow="PreItemId" msprop:Generator_ColumnPropNameInTable="PreItemIdColumn" msprop:Generator_UserColumnName="PreItemId" type="xs:long" minOccurs="0" />
+              <xs:element name="AvgPrice" msprop:Generator_ColumnVarNameInTable="columnAvgPrice" msprop:Generator_ColumnPropNameInRow="AvgPrice" msprop:Generator_ColumnPropNameInTable="AvgPriceColumn" msprop:Generator_UserColumnName="AvgPrice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PackType" msprop:Generator_ColumnVarNameInTable="columnPackType" msprop:Generator_ColumnPropNameInRow="PackType" msprop:Generator_ColumnPropNameInTable="PackTypeColumn" msprop:Generator_UserColumnName="PackType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CurrencyId" msprop:Generator_ColumnVarNameInTable="columnCurrencyId" msprop:Generator_ColumnPropNameInRow="CurrencyId" msprop:Generator_ColumnPropNameInTable="CurrencyIdColumn" msprop:Generator_UserColumnName="CurrencyId" type="xs:int" minOccurs="0" />
+              <xs:element name="YDOrderDetailsId" msprop:Generator_ColumnVarNameInTable="columnYDOrderDetailsId" msprop:Generator_ColumnPropNameInRow="YDOrderDetailsId" msprop:Generator_ColumnPropNameInTable="YDOrderDetailsIdColumn" msprop:Generator_UserColumnName="YDOrderDetailsId" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ItemListLookup" msprop:Generator_UserTableName="ItemListLookup" msprop:Generator_RowEvArgName="ItemListLookupRowChangeEvent" msprop:Generator_TableVarName="tableItemListLookup" msprop:Generator_TablePropName="ItemListLookup" msprop:Generator_RowDeletingName="ItemListLookupRowDeleting" msprop:Generator_RowChangingName="ItemListLookupRowChanging" msprop:Generator_RowDeletedName="ItemListLookupRowDeleted" msprop:Generator_RowEvHandlerName="ItemListLookupRowChangeEventHandler" msprop:Generator_TableClassName="ItemListLookupDataTable" msprop:Generator_RowChangedName="ItemListLookupRowChanged" msprop:Generator_RowClassName="ItemListLookupRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ItemId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnItemId" msprop:Generator_ColumnPropNameInRow="ItemId" msprop:Generator_ColumnPropNameInTable="ItemIdColumn" msprop:Generator_UserColumnName="ItemId" type="xs:long" />
+              <xs:element name="ItemName" msprop:Generator_ColumnVarNameInTable="columnItemName" msprop:Generator_ColumnPropNameInRow="ItemName" msprop:Generator_ColumnPropNameInTable="ItemNameColumn" msprop:Generator_UserColumnName="ItemName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DepartmentId" msprop:Generator_ColumnVarNameInTable="columnDepartmentId" msprop:Generator_ColumnPropNameInRow="DepartmentId" msprop:Generator_ColumnPropNameInTable="DepartmentIdColumn" msprop:Generator_UserColumnName="DepartmentId" type="xs:long" />
+              <xs:element name="ID-Name" msdata:ReadOnly="true" msdata:Expression="ItemId+' / '+ItemName" msprop:Generator_ColumnVarNameInTable="_columnID_Name" msprop:Generator_ColumnPropNameInRow="_ID_Name" msprop:Generator_ColumnPropNameInTable="_ID_NameColumn" msprop:Generator_UserColumnName="ID-Name" type="xs:string" minOccurs="0" />
+              <xs:element name="AccItemName" msprop:Generator_ColumnVarNameInTable="columnAccItemName" msprop:Generator_ColumnPropNameInRow="AccItemName" msprop:Generator_ColumnPropNameInTable="AccItemNameColumn" msprop:Generator_UserColumnName="AccItemName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AccItemStyle" msprop:Generator_ColumnVarNameInTable="columnAccItemStyle" msprop:Generator_ColumnPropNameInRow="AccItemStyle" msprop:Generator_ColumnPropNameInTable="AccItemStyleColumn" msprop:Generator_UserColumnName="AccItemStyle" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AccBuyerId" msprop:Generator_ColumnVarNameInTable="columnAccBuyerId" msprop:Generator_ColumnPropNameInRow="AccBuyerId" msprop:Generator_ColumnPropNameInTable="AccBuyerIdColumn" msprop:Generator_UserColumnName="AccBuyerId" type="xs:long" minOccurs="0" />
+              <xs:element name="CurrentPrice" msprop:Generator_ColumnVarNameInTable="columnCurrentPrice" msprop:Generator_ColumnPropNameInRow="CurrentPrice" msprop:Generator_ColumnPropNameInTable="CurrentPriceColumn" msprop:Generator_UserColumnName="CurrentPrice" type="xs:decimal" />
+              <xs:element name="UnitId" msprop:Generator_ColumnVarNameInTable="columnUnitId" msprop:Generator_ColumnPropNameInRow="UnitId" msprop:Generator_ColumnPropNameInTable="UnitIdColumn" msprop:Generator_UserColumnName="UnitId" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ItemListDepartment" msprop:Generator_UserTableName="ItemListDepartment" msprop:Generator_RowEvArgName="ItemListDepartmentRowChangeEvent" msprop:Generator_TableVarName="tableItemListDepartment" msprop:Generator_TablePropName="ItemListDepartment" msprop:Generator_RowDeletingName="ItemListDepartmentRowDeleting" msprop:Generator_RowChangingName="ItemListDepartmentRowChanging" msprop:Generator_RowDeletedName="ItemListDepartmentRowDeleted" msprop:Generator_RowEvHandlerName="ItemListDepartmentRowChangeEventHandler" msprop:Generator_TableClassName="ItemListDepartmentDataTable" msprop:Generator_RowChangedName="ItemListDepartmentRowChanged" msprop:Generator_RowClassName="ItemListDepartmentRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ItemId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnItemId" msprop:Generator_ColumnPropNameInRow="ItemId" msprop:Generator_ColumnPropNameInTable="ItemIdColumn" msprop:Generator_UserColumnName="ItemId" type="xs:long" />
+              <xs:element name="ItemName" msprop:Generator_ColumnVarNameInTable="columnItemName" msprop:Generator_ColumnPropNameInRow="ItemName" msprop:Generator_ColumnPropNameInTable="ItemNameColumn" msprop:Generator_UserColumnName="ItemName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DepartmentId" msprop:Generator_ColumnVarNameInTable="columnDepartmentId" msprop:Generator_ColumnPropNameInRow="DepartmentId" msprop:Generator_ColumnPropNameInTable="DepartmentIdColumn" msprop:Generator_UserColumnName="DepartmentId" type="xs:long" />
+              <xs:element name="DepartmentName" msprop:Generator_ColumnVarNameInTable="columnDepartmentName" msprop:Generator_ColumnPropNameInRow="DepartmentName" msprop:Generator_ColumnPropNameInTable="DepartmentNameColumn" msprop:Generator_UserColumnName="DepartmentName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UserLabel" msprop:Generator_ColumnVarNameInTable="columnUserLabel" msprop:Generator_ColumnPropNameInRow="UserLabel" msprop:Generator_ColumnPropNameInTable="UserLabelColumn" msprop:Generator_UserColumnName="UserLabel" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ItemLeadTime" msprop:Generator_UserTableName="ItemLeadTime" msprop:Generator_RowEvArgName="ItemLeadTimeRowChangeEvent" msprop:Generator_TableVarName="tableItemLeadTime" msprop:Generator_TablePropName="ItemLeadTime" msprop:Generator_RowDeletingName="ItemLeadTimeRowDeleting" msprop:Generator_RowChangingName="ItemLeadTimeRowChanging" msprop:Generator_RowDeletedName="ItemLeadTimeRowDeleted" msprop:Generator_RowEvHandlerName="ItemLeadTimeRowChangeEventHandler" msprop:Generator_TableClassName="ItemLeadTimeDataTable" msprop:Generator_RowChangedName="ItemLeadTimeRowChanged" msprop:Generator_RowClassName="ItemLeadTimeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LeadTimeId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnLeadTimeId" msprop:Generator_ColumnPropNameInRow="LeadTimeId" msprop:Generator_ColumnPropNameInTable="LeadTimeIdColumn" msprop:Generator_UserColumnName="LeadTimeId" type="xs:int" />
+              <xs:element name="ItemId" msprop:Generator_ColumnVarNameInTable="columnItemId" msprop:Generator_ColumnPropNameInRow="ItemId" msprop:Generator_ColumnPropNameInTable="ItemIdColumn" msprop:Generator_UserColumnName="ItemId" type="xs:long" minOccurs="0" />
+              <xs:element name="SupplierId" msprop:Generator_ColumnVarNameInTable="columnSupplierId" msprop:Generator_ColumnPropNameInRow="SupplierId" msprop:Generator_ColumnPropNameInTable="SupplierIdColumn" msprop:Generator_UserColumnName="SupplierId" type="xs:long" minOccurs="0" />
+              <xs:element name="LeadDay" msprop:Generator_ColumnVarNameInTable="columnLeadDay" msprop:Generator_ColumnPropNameInRow="LeadDay" msprop:Generator_ColumnPropNameInTable="LeadDayColumn" msprop:Generator_UserColumnName="LeadDay" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ItemList" />
+      <xs:field xpath="mstns:ItemId" />
+    </xs:unique>
+    <xs:unique name="ItemListLookup_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ItemListLookup" />
+      <xs:field xpath="mstns:ItemId" />
+    </xs:unique>
+    <xs:unique name="ItemListDepartment_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ItemListDepartment" />
+      <xs:field xpath="mstns:ItemId" />
+    </xs:unique>
+    <xs:unique name="ItemLeadTime_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ItemLeadTime" />
+      <xs:field xpath="mstns:LeadTimeId" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="ItemList_ItemLeadTime" msdata:parent="ItemList" msdata:child="ItemLeadTime" msdata:parentkey="ItemId" msdata:childkey="ItemId" msprop:Generator_UserChildTable="ItemLeadTime" msprop:Generator_ChildPropName="GetItemLeadTimeRows" msprop:Generator_UserRelationName="ItemList_ItemLeadTime" msprop:Generator_ParentPropName="ItemListRow" msprop:Generator_RelationVarName="relationItemList_ItemLeadTime" msprop:Generator_UserParentTable="ItemList" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

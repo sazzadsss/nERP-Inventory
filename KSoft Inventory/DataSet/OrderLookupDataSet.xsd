@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="OrderLookupDataSet" targetNamespace="http://tempuri.org/OrderLookupDataSet.xsd" xmlns:mstns="http://tempuri.org/OrderLookupDataSet.xsd" xmlns="http://tempuri.org/OrderLookupDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_InventoryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_InventoryConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Inventory.My.MySettings.GlobalReference.Default.KSoft_InventoryConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="OrderLookupTableAdapter" GeneratorDataComponentClassName="OrderLookupTableAdapter" Name="OrderLookup" UserDataComponentName="OrderLookupTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_InventoryConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        [Order].OrderId, [Order].ProgramNo, [Order].IsPrint, [Order].UserId, [Order].IsMultiPart, Style.StyleName
+FROM            [Order] LEFT OUTER JOIN
+                         Style ON [Order].StyleId = Style.StyleId
+ORDER BY [Order].ProgramNo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="OrderId" DataSetColumn="OrderId" />
+              <Mapping SourceColumn="ProgramNo" DataSetColumn="ProgramNo" />
+              <Mapping SourceColumn="IsPrint" DataSetColumn="IsPrint" />
+              <Mapping SourceColumn="UserId" DataSetColumn="UserId" />
+              <Mapping SourceColumn="IsMultiPart" DataSetColumn="IsMultiPart" />
+              <Mapping SourceColumn="StyleName" DataSetColumn="StyleName" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="KSoft_InventoryConnectionString (MySettings)" DbObjectName="[echo-printing].dbo.[Order]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByPrint" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByPrint" GeneratorSourceName="FillByPrint" GetMethodModifier="Public" GetMethodName="GetDataByPrint" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByPrint" UserSourceName="FillByPrint">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT IsMultiPart, IsPrint, OrderId, ProgramNo, UserId FROM [Order] WHERE (IsPrint = 1) ORDER BY ProgramNo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_InventoryConnectionString (MySettings)" DbObjectName="[echo-printing].dbo.[Order]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByProgramNoContain" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByProgramNoContain" GeneratorSourceName="FillByProgramNoContain" GetMethodModifier="Public" GetMethodName="GetDataByProgramNoContain" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByProgramNoContain" UserSourceName="FillByProgramNoContain">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        OrderId, ProgramNo, IsPrint, UserId, IsMultiPart
+FROM            [Order]
+WHERE        (ProgramNo LIKE '%' + @ProgramNo + '%')
+ORDER BY ProgramNo</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="ProgramNo" ColumnName="ProgramNo" DataSourceName="[echo-printing].dbo.[Order]" DataTypeServer="varchar(50)" DbType="AnsiString" Direction="Input" ParameterName="@ProgramNo" Precision="0" ProviderType="VarChar" Scale="0" Size="50" SourceColumn="ProgramNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="KSoft_InventoryConnectionString (MySettings)" DbObjectName="[echo-printing].dbo.[Order]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByUserId" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByUserId" GeneratorSourceName="FillByUserId" GetMethodModifier="Public" GetMethodName="GetDataByUserId" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByUserId" UserSourceName="FillByUserId">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT IsMultiPart, IsPrint, OrderId, ProgramNo, UserId FROM [Order] WHERE (UserId = @UserId) ORDER BY ProgramNo</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="UserId" ColumnName="UserId" DataSourceName="[echo-printing].dbo.[Order]" DataTypeServer="bigint" DbType="Int64" Direction="Input" ParameterName="@UserId" Precision="0" ProviderType="BigInt" Scale="0" Size="8" SourceColumn="UserId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="OrderLookupDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="OrderLookupDataSet" msprop:Generator_DataSetName="OrderLookupDataSet" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="OrderLookup" msprop:Generator_UserTableName="OrderLookup" msprop:Generator_RowDeletedName="OrderLookupRowDeleted" msprop:Generator_RowChangedName="OrderLookupRowChanged" msprop:Generator_RowClassName="OrderLookupRow" msprop:Generator_RowChangingName="OrderLookupRowChanging" msprop:Generator_RowEvArgName="OrderLookupRowChangeEvent" msprop:Generator_RowEvHandlerName="OrderLookupRowChangeEventHandler" msprop:Generator_TableClassName="OrderLookupDataTable" msprop:Generator_TableVarName="tableOrderLookup" msprop:Generator_RowDeletingName="OrderLookupRowDeleting" msprop:Generator_TablePropName="OrderLookup">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OrderId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="OrderId" msprop:Generator_ColumnPropNameInRow="OrderId" msprop:Generator_ColumnVarNameInTable="columnOrderId" msprop:Generator_ColumnPropNameInTable="OrderIdColumn" type="xs:long" />
+              <xs:element name="ProgramNo" msprop:Generator_UserColumnName="ProgramNo" msprop:Generator_ColumnVarNameInTable="columnProgramNo" msprop:Generator_ColumnPropNameInRow="ProgramNo" msprop:Generator_ColumnPropNameInTable="ProgramNoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsPrint" msprop:Generator_UserColumnName="IsPrint" msprop:Generator_ColumnVarNameInTable="columnIsPrint" msprop:Generator_ColumnPropNameInRow="IsPrint" msprop:Generator_ColumnPropNameInTable="IsPrintColumn" type="xs:boolean" />
+              <xs:element name="UserId" msprop:Generator_UserColumnName="UserId" msprop:Generator_ColumnPropNameInRow="UserId" msprop:Generator_ColumnVarNameInTable="columnUserId" msprop:Generator_ColumnPropNameInTable="UserIdColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="IsMultiPart" msprop:Generator_UserColumnName="IsMultiPart" msprop:Generator_ColumnPropNameInRow="IsMultiPart" msprop:Generator_ColumnVarNameInTable="columnIsMultiPart" msprop:Generator_ColumnPropNameInTable="IsMultiPartColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="StyleName" msprop:Generator_UserColumnName="StyleName" msprop:Generator_ColumnPropNameInRow="StyleName" msprop:Generator_ColumnVarNameInTable="columnStyleName" msprop:Generator_ColumnPropNameInTable="StyleNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PrgAndStyle" msdata:ReadOnly="true" msdata:Expression="ProgramNo + ' :: ' + StyleName" msprop:Generator_UserColumnName="PrgAndStyle" msprop:Generator_ColumnPropNameInRow="PrgAndStyle" msprop:Generator_ColumnVarNameInTable="columnPrgAndStyle" msprop:Generator_ColumnPropNameInTable="PrgAndStyleColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:OrderLookup" />
+      <xs:field xpath="mstns:OrderId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

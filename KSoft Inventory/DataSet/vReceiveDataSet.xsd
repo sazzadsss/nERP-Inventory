@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="vReceiveDataSet" targetNamespace="http://tempuri.org/vReceiveDataSet.xsd" xmlns:mstns="http://tempuri.org/vReceiveDataSet.xsd" xmlns="http://tempuri.org/vReceiveDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="KSoft_InventoryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="KSoft_InventoryConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KSoft_Inventory.My.MySettings.GlobalReference.Default.KSoft_InventoryConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vReceiveTableAdapter" GeneratorDataComponentClassName="vReceiveTableAdapter" Name="vReceive" UserDataComponentName="vReceiveTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="KSoft_InventoryConnectionString (MySettings)" DbObjectName="[echo-printing].dbo.vReceive" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ReceiveId, ReceiveDate, ChallanNo, ReceiveQuantity, ItemName, Price, BranchCode, Remarks FROM dbo.vReceive</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ReceiveId" DataSetColumn="ReceiveId" />
+              <Mapping SourceColumn="ReceiveDate" DataSetColumn="ReceiveDate" />
+              <Mapping SourceColumn="ChallanNo" DataSetColumn="ChallanNo" />
+              <Mapping SourceColumn="ReceiveQuantity" DataSetColumn="ReceiveQuantity" />
+              <Mapping SourceColumn="ItemName" DataSetColumn="ItemName" />
+              <Mapping SourceColumn="Price" DataSetColumn="Price" />
+              <Mapping SourceColumn="BranchCode" DataSetColumn="BranchCode" />
+              <Mapping SourceColumn="Remarks" DataSetColumn="Remarks" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="vReceiveDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="vReceiveDataSet" msprop:Generator_DataSetName="vReceiveDataSet" msprop:EnableTableAdapterManager="True">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vReceive" msprop:Generator_UserTableName="vReceive" msprop:Generator_RowDeletedName="vReceiveRowDeleted" msprop:Generator_RowChangedName="vReceiveRowChanged" msprop:Generator_RowClassName="vReceiveRow" msprop:Generator_RowChangingName="vReceiveRowChanging" msprop:Generator_RowEvArgName="vReceiveRowChangeEvent" msprop:Generator_RowEvHandlerName="vReceiveRowChangeEventHandler" msprop:Generator_TableClassName="vReceiveDataTable" msprop:Generator_TableVarName="tablevReceive" msprop:Generator_RowDeletingName="vReceiveRowDeleting" msprop:Generator_TablePropName="vReceive">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ReceiveId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="ReceiveId" msprop:Generator_ColumnPropNameInRow="ReceiveId" msprop:Generator_ColumnVarNameInTable="columnReceiveId" msprop:Generator_ColumnPropNameInTable="ReceiveIdColumn" type="xs:long" />
+              <xs:element name="ReceiveDate" msprop:Generator_UserColumnName="ReceiveDate" msprop:Generator_ColumnPropNameInRow="ReceiveDate" msprop:Generator_ColumnVarNameInTable="columnReceiveDate" msprop:Generator_ColumnPropNameInTable="ReceiveDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ChallanNo" msprop:Generator_UserColumnName="ChallanNo" msprop:Generator_ColumnPropNameInRow="ChallanNo" msprop:Generator_ColumnVarNameInTable="columnChallanNo" msprop:Generator_ColumnPropNameInTable="ChallanNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReceiveQuantity" msprop:Generator_UserColumnName="ReceiveQuantity" msprop:Generator_ColumnPropNameInRow="ReceiveQuantity" msprop:Generator_ColumnVarNameInTable="columnReceiveQuantity" msprop:Generator_ColumnPropNameInTable="ReceiveQuantityColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ItemName" msprop:Generator_UserColumnName="ItemName" msprop:Generator_ColumnPropNameInRow="ItemName" msprop:Generator_ColumnVarNameInTable="columnItemName" msprop:Generator_ColumnPropNameInTable="ItemNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Price" msprop:Generator_UserColumnName="Price" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInTable="PriceColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BranchCode" msprop:Generator_UserColumnName="BranchCode" msprop:Generator_ColumnPropNameInRow="BranchCode" msprop:Generator_ColumnVarNameInTable="columnBranchCode" msprop:Generator_ColumnPropNameInTable="BranchCodeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Remarks" msprop:Generator_UserColumnName="Remarks" msprop:Generator_ColumnPropNameInRow="Remarks" msprop:Generator_ColumnVarNameInTable="columnRemarks" msprop:Generator_ColumnPropNameInTable="RemarksColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vReceive" />
+      <xs:field xpath="mstns:ReceiveId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
