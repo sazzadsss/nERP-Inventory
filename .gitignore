@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/KSoft Inventory Solutions/v16
+/KSoft Inventory/bin/Debug
+/KSoft Inventory/obj/Debug

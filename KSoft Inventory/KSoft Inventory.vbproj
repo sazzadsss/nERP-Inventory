@@ -19,8 +19,8 @@
     <OptionInfer>On</OptionInfer>
     <ApplicationIcon>inventory.ico</ApplicationIcon>
     <IsWebBootstrapper>true</IsWebBootstrapper>
-    <ManifestCertificateThumbprint>F59C22FEDA04C02F55701DD69B9FE03250DE06DF</ManifestCertificateThumbprint>
-    <ManifestKeyFile>KSoft Inventory_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestCertificateThumbprint>344DEACA3B61C10834A1284E8BE7871E815E0A4E</ManifestCertificateThumbprint>
+    <ManifestKeyFile>KSoft Inventory_1_TemporaryKey.pfx</ManifestKeyFile>
     <GenerateManifests>true</GenerateManifests>
     <SignManifests>true</SignManifests>
     <TargetZone>LocalIntranet</TargetZone>
@@ -1921,6 +1921,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -3971,6 +3972,7 @@
     <None Include="DataSet\YarnRequsitionDataSet.xss">
       <DependentUpon>YarnRequsitionDataSet.xsd</DependentUpon>
     </None>
+    <None Include="KSoft Inventory_1_TemporaryKey.pfx" />
     <None Include="KSoft Inventory_TemporaryKey.pfx" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>

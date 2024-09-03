@@ -62,12 +62,12 @@ Public Class frmMain
 
     Private Sub frmMain_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        Dim CC As String = ReadStringData("Select CompanyCode From Company Where CompanyId=1", cnn)
+        'Dim CC As String = ReadStringData("Select CompanyCode From Company Where CompanyId=1", cnn)
 
-        If CC = "HAL" Then
-            Me.BackgroundImage = Global.KSoft_Inventory.My.Resources.Resources.Hornbill_Inventory
+        'If CC = "HAL" Then
+        '    Me.BackgroundImage = Global.KSoft_Inventory.My.Resources.Resources.Hornbill_Inventory
 
-        End If
+        'End If
 
         QueryString = "SELECT DepartmentName FROM DEPARTMENT WHERE (DepartmentId=" & DepartmentId & ")"
         DepartmentToolStripStatusLabel.Text = "Department :" & " " & ReadValue(QueryString, cnn)
