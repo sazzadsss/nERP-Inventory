@@ -170,6 +170,7 @@
     <Compile Include="Class\AppconfigClass.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Class\SessionManager.vb" />
     <Compile Include="DataSet\AdvanceYarnLotAllocationDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

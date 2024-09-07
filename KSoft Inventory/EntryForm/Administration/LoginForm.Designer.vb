@@ -1,7 +1,7 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 <Global.System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1726")>
 Partial Class LoginForm
-    Inherits System.Windows.Forms.Form
+    Inherits DevExpress.XtraEditors.XtraForm
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
@@ -58,7 +58,7 @@ Partial Class LoginForm
         '
         'DepartmentIdLabel
         '
-        DepartmentIdLabel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(90, Byte), Integer), CType(CType(35, Byte), Integer))
+        DepartmentIdLabel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         DepartmentIdLabel.ForeColor = System.Drawing.Color.White
         DepartmentIdLabel.Location = New System.Drawing.Point(36, 168)
         DepartmentIdLabel.Name = "DepartmentIdLabel"
@@ -69,7 +69,7 @@ Partial Class LoginForm
         '
         'UsernameLabel
         '
-        Me.UsernameLabel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(90, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.UsernameLabel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.UsernameLabel.ForeColor = System.Drawing.Color.White
         Me.UsernameLabel.Location = New System.Drawing.Point(36, 74)
         Me.UsernameLabel.Name = "UsernameLabel"
@@ -80,7 +80,7 @@ Partial Class LoginForm
         '
         'PasswordLabel
         '
-        Me.PasswordLabel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(90, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.PasswordLabel.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.PasswordLabel.ForeColor = System.Drawing.Color.White
         Me.PasswordLabel.Location = New System.Drawing.Point(36, 121)
         Me.PasswordLabel.Name = "PasswordLabel"
@@ -96,7 +96,7 @@ Partial Class LoginForm
         Me.UsernameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.UsernameTextBox.Location = New System.Drawing.Point(36, 94)
         Me.UsernameTextBox.Name = "UsernameTextBox"
-        Me.UsernameTextBox.Size = New System.Drawing.Size(210, 20)
+        Me.UsernameTextBox.Size = New System.Drawing.Size(210, 21)
         Me.UsernameTextBox.TabIndex = 0
         '
         'PasswordTextBox
@@ -107,7 +107,7 @@ Partial Class LoginForm
         Me.PasswordTextBox.Location = New System.Drawing.Point(36, 141)
         Me.PasswordTextBox.Name = "PasswordTextBox"
         Me.PasswordTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.PasswordTextBox.Size = New System.Drawing.Size(210, 20)
+        Me.PasswordTextBox.Size = New System.Drawing.Size(210, 21)
         Me.PasswordTextBox.TabIndex = 2
         '
         'Cancel
@@ -115,13 +115,12 @@ Partial Class LoginForm
         Me.Cancel.Cursor = System.Windows.Forms.Cursors.Default
         Me.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.Cancel.Location = New System.Drawing.Point(372, 168)
-        Me.Cancel.LookAndFeel.SkinMaskColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Cancel.LookAndFeel.SkinName = "Office 2010 Silver"
+        Me.Cancel.LookAndFeel.SkinName = "DevExpress Dark Style"
         Me.Cancel.LookAndFeel.UseDefaultLookAndFeel = False
         Me.Cancel.Name = "Cancel"
         Me.Cancel.Size = New System.Drawing.Size(83, 40)
         Me.Cancel.TabIndex = 5
-        Me.Cancel.Text = "&Cancel"
+        Me.Cancel.Text = "&Close"
         '
         'UserBindingSource
         '
@@ -159,12 +158,11 @@ Partial Class LoginForm
         '
         'OKButton
         '
-        Me.OKButton.Appearance.ForeColor = System.Drawing.Color.Black
+        Me.OKButton.Appearance.ForeColor = System.Drawing.Color.White
         Me.OKButton.Appearance.Options.UseForeColor = True
         Me.OKButton.Cursor = System.Windows.Forms.Cursors.Default
         Me.OKButton.Location = New System.Drawing.Point(283, 168)
-        Me.OKButton.LookAndFeel.SkinMaskColor = System.Drawing.Color.SteelBlue
-        Me.OKButton.LookAndFeel.SkinName = "Office 2010 Silver"
+        Me.OKButton.LookAndFeel.SkinName = "DevExpress Dark Style"
         Me.OKButton.LookAndFeel.UseDefaultLookAndFeel = False
         Me.OKButton.Name = "OKButton"
         Me.OKButton.Size = New System.Drawing.Size(83, 40)
@@ -178,12 +176,12 @@ Partial Class LoginForm
         Me.DepartmentTextBox.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.DepartmentTextBox.Location = New System.Drawing.Point(36, 188)
         Me.DepartmentTextBox.Name = "DepartmentTextBox"
-        Me.DepartmentTextBox.Size = New System.Drawing.Size(210, 20)
+        Me.DepartmentTextBox.Size = New System.Drawing.Size(210, 21)
         Me.DepartmentTextBox.TabIndex = 16
         '
         'Label1
         '
-        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(90, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Label1.Font = New System.Drawing.Font("Arial", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(0, -1)
@@ -191,7 +189,7 @@ Partial Class LoginForm
         Me.Label1.Padding = New System.Windows.Forms.Padding(30, 0, 0, 0)
         Me.Label1.Size = New System.Drawing.Size(493, 54)
         Me.Label1.TabIndex = 17
-        Me.Label1.Text = "nERP Inventory Log in "
+        Me.Label1.Text = "nERP Solutions Log In.."
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'RememberCheckBox
@@ -201,7 +199,7 @@ Partial Class LoginForm
         Me.RememberCheckBox.Cursor = System.Windows.Forms.Cursors.Default
         Me.RememberCheckBox.Location = New System.Drawing.Point(283, 121)
         Me.RememberCheckBox.Name = "RememberCheckBox"
-        Me.RememberCheckBox.Size = New System.Drawing.Size(164, 17)
+        Me.RememberCheckBox.Size = New System.Drawing.Size(168, 17)
         Me.RememberCheckBox.TabIndex = 18
         Me.RememberCheckBox.Text = "Remember Log-in Information"
         Me.RememberCheckBox.UseVisualStyleBackColor = False
@@ -232,8 +230,6 @@ Partial Class LoginForm
         Me.AcceptButton = Me.OKButton
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
-        Me.BackgroundImage = Global.KSoft_Inventory.My.Resources.Resources.noise
         Me.CancelButton = Me.Cancel
         Me.ClientSize = New System.Drawing.Size(477, 236)
         Me.Controls.Add(Me.DatetimeLabel)
@@ -249,7 +245,7 @@ Partial Class LoginForm
         Me.Controls.Add(Me.UsernameLabel)
         Me.Controls.Add(Me.Label2)
         Me.Cursor = System.Windows.Forms.Cursors.Default
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimizeBox = False
         Me.Name = "LoginForm"

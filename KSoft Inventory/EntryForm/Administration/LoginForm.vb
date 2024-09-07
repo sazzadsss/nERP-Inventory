@@ -126,6 +126,12 @@ Public Class LoginForm
                 UserName = UsernameTextBox.Text
                 UserId = ReadIntegerData("Select User_Id From [User] Where User_Name='" & UsernameTextBox.Text & "' And Password='" & PasswordTextBox.Text & "' And Active=1", cnn)
                 DepartmentId = ReadIntegerData("Select DepartmentId From [User] Where User_Id=" & UserId, cnn)
+
+                'Creating a user session while logged in
+                Dim sessionManager As New SessionManager()
+                sessionManager.CreateNewSession(UserId)
+                'End of Creating a user session while logged in
+
                 UserLevel = ReadIntData("Select User_Level From [User] Where User_Id=" & UserId, cnn)
 
                 'Remember 
@@ -141,6 +147,7 @@ Public Class LoginForm
 
                 'Me.PasswordTextBox.Text = ""
                 Me.Hide()
+                frmMain.MenuStrip.Visible = True
                 frmMain.Show()
 
             ElseIf RowCount > 1 Then

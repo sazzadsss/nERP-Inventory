@@ -47,13 +47,12 @@ Public Class frmMain
 
         'Protect Accidental Closing 
         If MessageBox.Show("Are you sure to exit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+
+            Dim sessionManager As New SessionManager
+
+            sessionManager.DeleteSession(My.Settings.UserId)
+
             e.Cancel = False
-
-            If Loginflag = False Then
-                Environment.Exit(0)
-            End If
-
-
         Else
             e.Cancel = True
         End If
@@ -132,9 +131,12 @@ Public Class frmMain
 
     Private Sub SignOutToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SignOutToolStripMenuItem.Click
 
-        Loginflag = True
-        Me.Close()
-        LoginForm.Show()
+        Dim sessionManager As New SessionManager
+
+        sessionManager.DeleteSession(My.Settings.UserId)
+        MenuStrip.Visible = False
+        Dim loginForm As New LoginForm()
+        loginForm.ShowDialog()
 
     End Sub
     'Checking user right for ToolStripMenuItem
