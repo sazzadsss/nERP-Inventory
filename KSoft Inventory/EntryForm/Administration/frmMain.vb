@@ -60,6 +60,18 @@ Public Class frmMain
     End Sub
 
     Private Sub frmMain_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Dim sessionManager As New SessionManager()
+        Dim userId As Integer = My.Settings.UserId
+
+        If sessionManager.IsUserLoggedIn(userId) = False Then
+            'MessageBox.Show("User is already logged in.")
+            MenuStrip.Visible = False
+            Dim loginForm As New LoginForm()
+
+            loginForm.ShowDialog()
+
+            ' Proceed to the login form or other actions
+        End If
 
         'Dim CC As String = ReadStringData("Select CompanyCode From Company Where CompanyId=1", cnn)
 

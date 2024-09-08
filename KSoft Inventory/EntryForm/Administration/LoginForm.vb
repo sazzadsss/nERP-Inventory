@@ -14,7 +14,7 @@ Public Class LoginForm
 
     Dim loc As Point
     Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click
-        fade_out()
+        frmMain.Close()
         Me.Close()
     End Sub
     '    Public Sub fade_in()
